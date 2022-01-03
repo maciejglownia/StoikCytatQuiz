@@ -6,5 +6,13 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="stoic_text">#6B705C</color>
+    <color name="stoic_button">#A5A58D</color>
+    <color name="stoic_light_bg">#FFE8D6</color>
+    <color name="stoic_dark_bg">#DDBEA9</color>
+    <color name="stoic_one_of_answers_frame">#B7B7A4</color>
+    <color name="stoic_good_answer_frame">#CB997E</color>
+
+
 </resources>
