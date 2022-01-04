@@ -1,11 +1,14 @@
 package pl.glownia.maciej.stoikcytatquiz
 
+import android.graphics.Color
+import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 
 // After AppCompatActivity() I added View.OnClickListener to make things CLICKABLE
 // Of course I need to override onClick method because OnClickListener is an interface
@@ -50,6 +53,7 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
 
         mQuestionsList = Constants.getQuestions()
         setQuestion()
+        defaultAnswersView()
     }
 
     private fun setQuestion() {
@@ -77,6 +81,42 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
             btnNext?.text = "KONIEC"
         } else {
             btnNext?.text = "DALEJ"
+        }
+    }
+
+    // Set the default options when the new position is loaded or when the answer is reselected
+    // It's going to reset basically the colors of the selected answers,
+    // then we can just set it to other color
+    private fun defaultAnswersView() {
+        // List of text views, which are my four text use that I can select from
+        val answers = ArrayList<TextView>()
+        // Because answer one is a nullable I need to use "let statement"
+        // Then I can add this answer to the answers
+        // Text view, which is what we need here for our options array list
+        tvAnswerOne?.let {
+            // I can now add it at the index zero.
+            answers.add(0, it) // it is actual text view, so tvAnswerOne
+        }
+        tvAnswerTwo?.let {
+            answers.add(1, it)
+        }
+        tvAnswerThree?.let {
+            answers.add(2, it)
+        }
+        tvAnswerFour?.let {
+            answers.add(3, it)
+        }
+
+        // Set color for answer default answer (before answer)
+        for (answer in answers) {
+            answer.setTextColor(Color.parseColor("#89896C"))
+            // Typeface is another property of answer
+            answer.typeface = Typeface.DEFAULT
+            // res -> drawable -> default...
+            answer.background = ContextCompat.getDrawable(
+                this@QuizQuestionsActivity,
+                R. drawable.default_answer_border_bg
+            )
         }
     }
 
