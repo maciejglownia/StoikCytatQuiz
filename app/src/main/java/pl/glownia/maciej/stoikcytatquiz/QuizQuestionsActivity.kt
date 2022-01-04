@@ -47,6 +47,37 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
         tvAnswerThree = findViewById(R.id.tv_answer_three)
         tvAnswerFour = findViewById(R.id.tv_answer_four)
         btnNext = findViewById(R.id.btn_next)
+
+        mQuestionsList = Constants.getQuestions()
+        setQuestion()
+    }
+
+    private fun setQuestion() {
+        // It starts at the position one and then go through the individual positions now
+        // This will give me the individual question that I am currently looking at
+        var currentPosition = 1
+        // This is unsafe nullable type (T?) conversion to a non-nullable type (T),
+        // !! will throw NullPointerException if the value is null. (Force it)
+        // Get the question
+        val question: Question = mQuestionsList!![currentPosition - 1]
+        // Set everything we need
+        progressBar?.progress = currentPosition
+        // e.g. 1/10 - depends on size of ArrayList - so on quantity of questions/quotes
+        tvProgress?.text = "$currentPosition/${progressBar?.max}"
+        // Set text question and answers
+        tvQuestion?.text = question.question
+        tvQuote?.text = question.quote
+        tvAnswerOne?.text = question.answer1
+        tvAnswerTwo?.text = question.answer2
+        tvAnswerThree?.text = question.answer3
+        tvAnswerFour?.text = question.answer4
+
+        // Set the button based on, if it is next question or last click at the end
+        if (mCurrentPosition == mQuestionsList!!.size) {
+            btnNext?.text = "KONIEC"
+        } else {
+            btnNext?.text = "DALEJ"
+        }
     }
 
     override fun onClick(view: View?) {
