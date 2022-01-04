@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 
 // After AppCompatActivity() I added View.OnClickListener to make things CLICKABLE
@@ -55,6 +56,7 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
         tvAnswerTwo?.setOnClickListener(this)
         tvAnswerThree?.setOnClickListener(this)
         tvAnswerFour?.setOnClickListener(this)
+        btnNext?.setOnClickListener(this)
 
         mQuestionsList = Constants.getQuestions()
         setQuestion()
@@ -167,6 +169,37 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
                 tvAnswerFour?.let {
                     selectedAnswerView(it, 4)
                 }
+            }
+        }
+    }
+
+    // Assign the color
+    // This method requires context as an integer, which is drawable resources ID
+    private fun answerView(answer: Int, drawableView: Int) {
+        when (answer) {
+            1 -> {
+                tvAnswerOne?.background = ContextCompat.getDrawable(
+                    this@QuizQuestionsActivity,
+                    drawableView
+                )
+            }
+            2 -> {
+                tvAnswerTwo?.background = ContextCompat.getDrawable(
+                    this@QuizQuestionsActivity,
+                    drawableView
+                )
+            }
+            3 -> {
+                tvAnswerThree?.background = ContextCompat.getDrawable(
+                    this@QuizQuestionsActivity,
+                    drawableView
+                )
+            }
+            4 -> {
+                tvAnswerFour?.background = ContextCompat.getDrawable(
+                    this@QuizQuestionsActivity,
+                    drawableView
+                )
             }
         }
     }
