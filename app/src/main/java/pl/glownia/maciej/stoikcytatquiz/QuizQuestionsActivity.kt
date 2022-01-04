@@ -51,6 +51,11 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
         tvAnswerFour = findViewById(R.id.tv_answer_four)
         btnNext = findViewById(R.id.btn_next)
 
+        tvAnswerOne?.setOnClickListener(this)
+        tvAnswerTwo?.setOnClickListener(this)
+        tvAnswerThree?.setOnClickListener(this)
+        tvAnswerFour?.setOnClickListener(this)
+
         mQuestionsList = Constants.getQuestions()
         setQuestion()
         defaultAnswersView()
@@ -132,10 +137,37 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
         tv.setTypeface(tv.typeface, Typeface.BOLD)
         tv.background = ContextCompat.getDrawable(
             this@QuizQuestionsActivity,
-            R.drawable.default_answer_border_bg
+            R.drawable.selected_answer_border_bg
         )
     }
 
     override fun onClick(view: View?) {
+        when (view?.id) {
+            // When we clicked on the answer one and so on
+            // We're calling this select that answer view method that we just created
+            // It will highlight the selected option -> change its appearance.
+            // Important ! At the same time, it's also going to change the selected option number,
+            // We need to know if we've selected the correct option or not
+            R.id.tv_answer_one -> {
+                tvAnswerOne?.let {
+                    selectedAnswerView(it, 1) // it is the TV option one text view
+                }
+            }
+            R.id.tv_answer_two -> {
+                tvAnswerTwo?.let {
+                    selectedAnswerView(it, 2)
+                }
+            }
+            R.id.tv_answer_three -> {
+                tvAnswerThree?.let {
+                    selectedAnswerView(it, 3)
+                }
+            }
+            R.id.tv_answer_four -> {
+                tvAnswerFour?.let {
+                    selectedAnswerView(it, 4)
+                }
+            }
+        }
     }
 }
