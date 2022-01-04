@@ -115,9 +115,25 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
             // res -> drawable -> default...
             answer.background = ContextCompat.getDrawable(
                 this@QuizQuestionsActivity,
-                R. drawable.default_answer_border_bg
+                R.drawable.default_answer_border_bg
             )
         }
+    }
+
+    // We need to know which text we need to change and then we need
+    // to know which answer it was (arguments -> answer number (Int))
+    private fun selectedAnswerView(tv: TextView, selectedAnswerNumber: Int) {
+        //Set every single button to its normal state
+        defaultAnswersView()
+
+        mSelectedOptionPosition = selectedAnswerNumber
+        // Set text view after click on it
+        tv.setTextColor(Color.parseColor("#7E7E63"))
+        tv.setTypeface(tv.typeface, Typeface.BOLD)
+        tv.background = ContextCompat.getDrawable(
+            this@QuizQuestionsActivity,
+            R.drawable.default_answer_border_bg
+        )
     }
 
     override fun onClick(view: View?) {
