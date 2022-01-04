@@ -4,27 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#CB997E"
+    android:background="#C9C9BA"
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".MainActivity">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:gravity="center"
-        android:text="@string/hello_message"
-        android:textColor="@color/white"
-        android:textSize="25sp"
-        android:textStyle="bold" />
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:background="@color/white"
+        android:background="@color/stoic_light_bg"
         android:elevation="5dp"
         app:cardCornerRadius="8dp">
 
@@ -37,10 +27,20 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:gravity="center"
+                android:text="@string/hello_message"
+                android:textColor="@color/stoic_text"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="16dp"
                 android:text="@string/welcome_message"
-                android:textColor="#9095A2"
+                android:textColor="@color/stoic_text"
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
@@ -52,7 +52,7 @@
                 android:padding="16dp"
                 android:text="@string/start_text_to_user"
                 android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:textSize="20sp" />
 
 
             <Button
@@ -60,8 +60,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:layout_marginTop="16dp"
-                android:background="#A5A58D"
+                android:background="@drawable/button_border_bg"
                 android:padding="16dp"
                 android:text="@string/next_button"
                 android:textColor="@color/white"

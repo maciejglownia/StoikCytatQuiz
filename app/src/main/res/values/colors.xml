@@ -7,12 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFF</color>
-    <color name="stoic_text">#6B705C</color>
-    <color name="stoic_button">#A5A58D</color>
-    <color name="stoic_light_bg">#FFE8D6</color>
-    <color name="stoic_dark_bg">#DDBEA9</color>
-    <color name="stoic_one_of_answers_frame">#B7B7A4</color>
-    <color name="stoic_good_answer_frame">#CB997E</color>
+    <color name="stoic_text">#89896C</color>
+    <color name="stoic_button">#7E7E63</color>
+    <color name="stoic_light_bg">#C9C9BA</color>
+    <color name="stoic_dark_bg">#89896C</color>
+    <color name="stoic_one_of_answers_frame">#EEDFD3</color>
+    <color name="stoic_good_answer_frame">#C9C9BA</color>
 
 
 </resources>
