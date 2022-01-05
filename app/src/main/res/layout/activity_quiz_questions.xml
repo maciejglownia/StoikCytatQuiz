@@ -32,7 +32,7 @@
             android:gravity="center"
             android:textColor="@color/black"
             android:textSize="22sp"
-            tools:text="Cytat" />
+            tools:text="quote" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -58,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="15dp"
-                android:textColor="@color/stoic_text"
+                android:textColor="@color/stoic_answer_text"
                 android:textSize="14sp"
                 tools:text="0/5" />
         </LinearLayout>
@@ -68,48 +68,48 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:background="@drawable/default_option_border_bg"
+            android:background="@drawable/default_answer_border_bg"
             android:gravity="center"
             android:padding="15dp"
-            android:textColor="@color/stoic_text"
+            android:textColor="@color/stoic_answer_text"
             android:textSize="18sp"
-            tools:text="Stoic" />
+            tools:text="stoic" />
 
         <TextView
             android:id="@+id/tv_answer_two"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:background="@drawable/default_option_border_bg"
+            android:background="@drawable/default_answer_border_bg"
             android:gravity="center"
             android:padding="15dp"
-            android:textColor="#7A8089"
+            android:textColor="@color/stoic_answer_text"
             android:textSize="18sp"
-            tools:text="Stoic" />
+            tools:text="stoic" />
 
         <TextView
             android:id="@+id/tv_answer_three"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:background="@drawable/default_option_border_bg"
+            android:background="@drawable/default_answer_border_bg"
             android:gravity="center"
             android:padding="15dp"
-            android:textColor="#7A8089"
+            android:textColor="@color/stoic_answer_text"
             android:textSize="18sp"
-            tools:text="Stoic" />
+            tools:text="stoic" />
 
         <TextView
             android:id="@+id/tv_answer_four"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:background="@drawable/default_option_border_bg"
+            android:background="@drawable/default_answer_border_bg"
             android:gravity="center"
             android:padding="15dp"
-            android:textColor="#7A8089"
+            android:textColor="@color/stoic_answer_text"
             android:textSize="18sp"
-            tools:text="Stoic" />
+            tools:text="stoic" />
 
         <Button
             android:id="@+id/btn_next"
