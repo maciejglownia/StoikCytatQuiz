@@ -19,7 +19,7 @@ class ResultActivity : AppCompatActivity() {
         val correctAnswers = intent.getIntExtra(Constants.CORRECT_ANSWERS, 0)
 
         tvScore.text = "Twój wynik to $correctAnswers poprawnych odpowiedzi " +
-                "na $totalQuestions możliwych"
+                "na \n$totalQuestions możliwych"
 
         btnFinish.setOnClickListener {
             startActivity(Intent(this@ResultActivity, MainActivity::class.java))
