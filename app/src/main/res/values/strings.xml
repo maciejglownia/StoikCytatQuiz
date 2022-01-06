@@ -5,4 +5,9 @@
     <string name="next_button">Dalej</string>
     <string name="hello_message">Cześć!</string>
     <string name="question_before_quote">question</string>
+    <string name="laurel_wreath_image">laurel_wreath</string>
+    <string name="message_about_result">Twój wynik na 0 z 9 pytań</string>
+    <string name="finish_button_text">CHCĘ ZAKOŃCZYĆ QUIZ</string>
+    <string name="exclamation_mark_about_result">Twój wynik!</string>
+    <string name="message_to_user_they_did_it">Zrobiłeś to!</string>
 </resources>

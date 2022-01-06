@@ -14,6 +14,7 @@
     <color name="stoic_dark_bg">#89896C</color>
     <color name="stoic_one_of_answers_frame">#EEDFD3</color>
     <color name="stoic_good_answer_frame">#C9C9BA</color>
+    <color name="main_background">#C9C9BA</color>
 
 
 </resources>
