@@ -1,5 +1,6 @@
 package pl.glownia.maciej.stoikcytatquiz
 
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
 import android.os.Bundle
@@ -24,6 +25,7 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
 
     // We need to know which answer was selected (0 is default)
     private var mSelectedAnswerPosition: Int = 0
+    private var mCorrectAnswers: Int = 0
 
     // Here I need to set up all items I want to access
     // All of the views: e.g. TextViews, ImageViews, Buttons, ProgressBar, etc.
@@ -67,11 +69,14 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun setQuestion() {
+        // Reset selected answer or answers if incorrect to make them cleared in next question
         defaultAnswersView()
         // This is unsafe nullable type (T?) conversion to a non-nullable type (T),
         // !! will throw NullPointerException if the value is null. (Force it)
+        // Because the question list is nullable we have to make here double ! to force it
+        // Because we are sure that question list is not going to be empty at this point
         // Get the question
-        val question: Question = mQuestionsList!![mCurrentPosition - 1]
+        val question: Question = mQuestionsList!![mCurrentPosition - 1] // -1 because ArrayList
         // Set everything we need
         progressBar?.progress = mCurrentPosition
         // e.g. 1/10 - depends on size of ArrayList - so on quantity of questions/quotes
@@ -184,6 +189,20 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
                         mCurrentPosition <= mQuestionsList!!.size -> {
                             setQuestion()
                         }
+                        else -> {
+                            val intent = Intent(
+                                this@QuizQuestionsActivity,
+                                ResultActivity::class.java
+                            )
+                            intent.putExtra(Constants.CORRECT_ANSWERS, mCorrectAnswers)
+                            // how many questions are there in total and sent. That's what that size gets.
+                            intent.putExtra(Constants.TOTAL_QUESTIONS, mQuestionsList?.size)
+                            startActivity(intent)
+                            finish()
+                            // finish activity at the end cause I don't want user to jump to questions
+                            // User should only (when clicking the back button), be able
+                            // to get back to the start screen
+                        }
                     }
                 } else {
                     // Need to know at which position we are and what the correct answer is
@@ -192,7 +211,11 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
 
                     if (mSelectedAnswerPosition != question!!.correctAnswer) {
                         answerView(mSelectedAnswerPosition, R.drawable.wrong_answer_border_bg)
+                    } else {
+                        mCorrectAnswers++ // increment if answer is correct
                     }
+                    // Need to set correct answer on color for correct answer if users answer
+                    // was either good or bad
                     answerView(question.correctAnswer, R.drawable.correct_answer_border_bg)
 
                     // Set the button based on, if it is next question or last click at the end
