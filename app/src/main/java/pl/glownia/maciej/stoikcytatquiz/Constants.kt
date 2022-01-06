@@ -2,6 +2,16 @@ package pl.glownia.maciej.stoikcytatquiz
 
 object Constants {
 
+    // consts are compile time constants it means that their value has to be assigned
+    // during compile time, unlike vals, where it can be done at runtime.
+    // This means, that consts can never be assigned to a function or any class constructor,
+    // but only to a String or primitive.
+
+    // Location, under which are the details - can to retrieve them
+    // when moving data from one activity to another.
+    const val TOTAL_QUESTIONS: String = "total_questions"
+    const val CORRECT_ANSWERS:String = "correct_answers"
+
     fun getQuestions(): ArrayList<Question> {
         val questionsList = ArrayList<Question>()
         val question1 = Question(
