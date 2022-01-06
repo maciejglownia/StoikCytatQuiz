@@ -1,4 +1,7 @@
 Here is place to put sources of stuff that is used in app.
 
+DRAWABLE
 1. App main icon:
 https://www.flaticon.com/free-icon/philosophy_2178189?term=philosophy&page=1&position=6&page=1&position=6&related_id=2178189&origin=search
+2. laurel
+https://www.flaticon.com/premium-icon/laurel-wreath_6024978?term=laurel&page=1&position=5&page=1&position=5&related_id=6024978&origin=search
