@@ -1,6 +1,7 @@
 package pl.glownia.maciej.stoikcytatquiz
 
 import android.content.Intent
+import android.content.res.ColorStateList
 import android.graphics.Color
 import android.graphics.Typeface
 import android.os.Build
@@ -47,6 +48,7 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
         tvQuestion = findViewById(R.id.tv_question)
         tvQuote = findViewById(R.id.tv_quote)
         progressBar = findViewById(R.id.progressBar)
+        progressBar?.progressTintList = ColorStateList.valueOf(Color.DKGRAY)
         tvProgress = findViewById(R.id.tv_progress)
         tvAnswerOne = findViewById(R.id.tv_answer_one)
         tvAnswerTwo = findViewById(R.id.tv_answer_two)
