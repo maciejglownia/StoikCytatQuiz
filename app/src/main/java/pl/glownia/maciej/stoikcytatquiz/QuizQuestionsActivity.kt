@@ -10,6 +10,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 
@@ -68,7 +69,6 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
         btnNext?.setOnClickListener(this)
         // 
         mQuestionsList = getRandomLimitedNumberOfQuestions()
-
         setQuestion()
     }
 
@@ -96,8 +96,8 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
         val question: Question = mQuestionsList!![mCurrentPosition - 1] // -1 because ArrayList
         // Set everything we need
         progressBar?.progress = mCurrentPosition
+        progressBar?.max = mQuestionsList!!.size
         // e.g. 1/10 - depends on size of ArrayList - so on quantity of questions/quotes
-        val no = mQuestionsList!!.size
         tvProgress?.text = "$mCurrentPosition/${mQuestionsList!!.size}"
         // Set text question and answers
         tvQuestion?.text = question.question
@@ -200,12 +200,18 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
             // to go to the next question
             R.id.btn_next -> {
                 if (mSelectedAnswerPosition == 0) {
-                    mCurrentPosition++
+                    // Make sure that one of answers is clicked
+                    if(mSelectedAnswerPosition == 0 && btnNext!!.text.equals("POTWIERDŹ")) {
+                        Toast.makeText(this, "Zaznacz odpowiedź!", Toast.LENGTH_SHORT).show()
+                    } else {
+                        mCurrentPosition++
+                    }
 
                     // As long there are questions yet it is going to ask for next question
                     when {
                         mCurrentPosition <= mQuestionsList!!.size -> {
                             setQuestion()
+
                         }
                         else -> {
                             val intent = Intent(
@@ -226,7 +232,6 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
                     // Need to know at which position we are and what the correct answer is
                     val question =
                         mQuestionsList?.get(mCurrentPosition - 1) // -1 -> counts from zero
-
                     if (mSelectedAnswerPosition != question!!.correctAnswer) {
                         answerView(mSelectedAnswerPosition, R.drawable.wrong_answer_border_bg)
                     } else {
