@@ -71,9 +71,9 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun getRandomLimitedNumberOfQuestions(): ArrayList<Question> {
-        val questionsList = Constants.createQuestion()
+        val questionsList = Constants.getQuestion()
         // Set how many question would like to display
-        val numberOfQuestionsToDisplay = 1
+        val numberOfQuestionsToDisplay = 5
         // To have numbers of questions as equals above it need to subtract this value from arraylist size
         val randomElements =
             questionsList!!.asSequence().shuffled().take(questionsList.size.minus(numberOfQuestionsToDisplay)).toList()
@@ -95,7 +95,8 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
         // Set everything we need
         progressBar?.progress = mCurrentPosition
         // e.g. 1/10 - depends on size of ArrayList - so on quantity of questions/quotes
-        tvProgress?.text = "$mCurrentPosition/${progressBar?.max}"
+        val no = mQuestionsList!!.size
+        tvProgress?.text = "$mCurrentPosition/${mQuestionsList!!.size}"
         // Set text question and answers
         tvQuestion?.text = question.question
         tvQuote?.text = question.quote
