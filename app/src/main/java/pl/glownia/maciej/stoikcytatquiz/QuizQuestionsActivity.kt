@@ -15,7 +15,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 
 // After AppCompatActivity() is View.OnClickListener to make things CLICKABLE
-//  need to override onClick method because OnClickListener is an interface
+// need to override onClick method because OnClickListener is an interface
 class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
 
     // Create here than we can use it inside all methods
@@ -78,9 +78,10 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
         val numberOfQuestionsToDisplay = 5
         // To have numbers of questions as equals above it need to subtract this value from arraylist size
         val randomElements =
-            questionsList!!.asSequence().shuffled().take(questionsList.size.minus(numberOfQuestionsToDisplay)).toList()
+            questionsList.asSequence().shuffled()
+                .take(questionsList.size.minus(numberOfQuestionsToDisplay)).toList()
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            questionsList!!.removeIf { question -> randomElements.contains(question) }
+            questionsList.removeIf { question -> randomElements.contains(question) }
         }
         return questionsList
     }
@@ -109,9 +110,9 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
 
         // Set the button based on, if it is next question or last click at the end
         if (mCurrentPosition == mQuestionsList!!.size) {
-            btnNext?.text = "KONIEC"
+            btnNext?.text = "KONIEC"    // "THE END"
         } else {
-            btnNext?.text = "POTWIERDŹ"
+            btnNext?.text = "POTWIERDŹ" // "CONFIRM"
         }
     }
 
@@ -167,6 +168,37 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
         )
     }
 
+    // Assign the color
+    // This method requires context as an integer, which is drawable resources ID
+    private fun answerView(answer: Int, drawableView: Int) {
+        when (answer) {
+            1 -> {
+                tvAnswerOne?.background = ContextCompat.getDrawable(
+                    this@QuizQuestionsActivity,
+                    drawableView
+                )
+            }
+            2 -> {
+                tvAnswerTwo?.background = ContextCompat.getDrawable(
+                    this@QuizQuestionsActivity,
+                    drawableView
+                )
+            }
+            3 -> {
+                tvAnswerThree?.background = ContextCompat.getDrawable(
+                    this@QuizQuestionsActivity,
+                    drawableView
+                )
+            }
+            4 -> {
+                tvAnswerFour?.background = ContextCompat.getDrawable(
+                    this@QuizQuestionsActivity,
+                    drawableView
+                )
+            }
+        }
+    }
+
     override fun onClick(view: View?) {
         when (view?.id) {
             // When we clicked on the answer one and so on
@@ -201,8 +233,13 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btn_next -> {
                 if (mSelectedAnswerPosition == 0) {
                     // Make sure that one of answers is clicked
-                    if(mSelectedAnswerPosition == 0 && btnNext!!.text.equals("POTWIERDŹ")) {
-                        Toast.makeText(this, "Zaznacz odpowiedź!", Toast.LENGTH_SHORT).show()
+                    if (mSelectedAnswerPosition == 0 &&
+                        btnNext!!.text.equals("POTWIERDŹ")  // "CONFIRM"
+                    ) {   // "CONFIRM"
+                        Toast.makeText(
+                            this,
+                            "Zaznacz odpowiedź!", Toast.LENGTH_SHORT    // "PICK THE ANSWER"
+                        ).show()
                     } else {
                         mCurrentPosition++
                     }
@@ -211,7 +248,6 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
                     when {
                         mCurrentPosition <= mQuestionsList!!.size -> {
                             setQuestion()
-
                         }
                         else -> {
                             val intent = Intent(
@@ -243,45 +279,14 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
 
                     // Set the button based on, if it is next question or last click at the end
                     if (mCurrentPosition == mQuestionsList!!.size) {
-                        btnNext?.text = "KONIEC"
+                        btnNext?.text = "KONIEC" // "THE END"
                     } else {
-                        btnNext?.text = "NASTĘPNE PYTANIE"
+                        btnNext?.text = "NASTĘPNE PYTANIE" // "NEXT QUESTION"
                     }
                     // Set back the selected option position to zero
                     // Because otherwise we will always stay at the current selected option
                     mSelectedAnswerPosition = 0
                 }
-            }
-        }
-    }
-
-    // Assign the color
-// This method requires context as an integer, which is drawable resources ID
-    private fun answerView(answer: Int, drawableView: Int) {
-        when (answer) {
-            1 -> {
-                tvAnswerOne?.background = ContextCompat.getDrawable(
-                    this@QuizQuestionsActivity,
-                    drawableView
-                )
-            }
-            2 -> {
-                tvAnswerTwo?.background = ContextCompat.getDrawable(
-                    this@QuizQuestionsActivity,
-                    drawableView
-                )
-            }
-            3 -> {
-                tvAnswerThree?.background = ContextCompat.getDrawable(
-                    this@QuizQuestionsActivity,
-                    drawableView
-                )
-            }
-            4 -> {
-                tvAnswerFour?.background = ContextCompat.getDrawable(
-                    this@QuizQuestionsActivity,
-                    drawableView
-                )
             }
         }
     }
