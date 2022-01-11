@@ -71,9 +71,9 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun getRandomLimitedNumberOfQuestions(): ArrayList<Question> {
-        val questionsList = Constants.getQuestions()
+        val questionsList = Constants.createQuestion()
         // Set how many question would like to display
-        val numberOfQuestionsToDisplay = 4
+        val numberOfQuestionsToDisplay = 1
         // To have numbers of questions as equals above it need to subtract this value from arraylist size
         val randomElements =
             questionsList!!.asSequence().shuffled().take(questionsList.size.minus(numberOfQuestionsToDisplay)).toList()

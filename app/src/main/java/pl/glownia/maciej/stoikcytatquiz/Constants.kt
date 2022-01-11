@@ -12,6 +12,47 @@ object Constants {
     const val TOTAL_QUESTIONS: String = "total_questions"
     const val CORRECT_ANSWERS: String = "correct_answers"
 
+    fun createQuestion(): ArrayList<Question> {
+        val questionListTest = ArrayList<Question>()
+        val numberOfQuestions = quotes().size
+        for (i in 1..numberOfQuestions) {
+            val question = Question(
+                i,
+                questionContent(),
+                quotes().getValue(i),
+                possibilityAnswers().getValue(1),
+                possibilityAnswers().getValue(2),
+                possibilityAnswers().getValue(3),
+                possibilityAnswers().getValue(4),
+                correctAnswers().getValue(i)
+            )
+            questionListTest.add(question)
+        }
+        return questionListTest
+
+    }
+
+    private fun questionContent(): String {
+        return "Czyje to słowa?"
+    }
+
+    private fun quotes(): Map<Int, String> {
+        return mapOf(1 to "''Lekarstwem na przyzwyczajenie jest inne przyzwyczajenie''")
+    }
+
+    private fun possibilityAnswers(): Map<Int, String> {
+        return mapOf(
+            1 to "Epitktet z Hierapolis",
+            2 to "Marek Aureliusz",
+            3 to "Seneka Młodszy",
+            4 to "Zenon z Kition"
+        )
+    }
+
+    private fun correctAnswers(): Map<Int, Int> {
+        return mapOf(1 to 1)
+    }
+
     fun getQuestions(): ArrayList<Question> {
         val questionsList = ArrayList<Question>()
         val question1 = Question(
@@ -131,8 +172,8 @@ object Constants {
 
         val question10 = Question(
             10,
-            questionString(),
-            quotesList().getValue(10),
+            questionContent(),
+            quotes().getValue(10),
             possibilityAnswers().getValue(1),
             possibilityAnswers().getValue(2),
             possibilityAnswers().getValue(3),
@@ -144,24 +185,5 @@ object Constants {
         return questionsList
     }
 
-    private fun questionString(): String {
-        return "Czyje to słowa?"
-    }
 
-    private fun quotesList(): Map<Int, String> {
-        return mapOf(10 to "''Lekarstwem na przyzwyczajenie jest inne przyzwyczajenie''")
-    }
-
-    private fun possibilityAnswers(): Map<Int, String> {
-        return mapOf(
-            1 to "Epitktet z Hierapolis",
-            2 to "Marek Aureliusz",
-            3 to "Seneka Młodszy",
-            4 to "Zenon z Kition"
-        )
-    }
-
-    private fun correctAnswers(): Map<Int, Int> {
-        return mapOf(10 to 1)
-    }
 }
