@@ -3,6 +3,7 @@ package pl.glownia.maciej.stoikcytatquiz
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
+import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -63,9 +64,23 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
         tvAnswerThree?.setOnClickListener(this)
         tvAnswerFour?.setOnClickListener(this)
         btnNext?.setOnClickListener(this)
+        // 
+        mQuestionsList = getRandomLimitedNumberOfQuestions()
 
-        mQuestionsList = Constants.getQuestions()
         setQuestion()
+    }
+
+    private fun getRandomLimitedNumberOfQuestions(): ArrayList<Question> {
+        val questionsList = Constants.getQuestions()
+        // Set how many question would like to display
+        val numberOfQuestionsToDisplay = 4
+        // To have numbers of questions as equals above it need to subtract this value from arraylist size
+        val randomElements =
+            questionsList!!.asSequence().shuffled().take(questionsList.size.minus(numberOfQuestionsToDisplay)).toList()
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            questionsList!!.removeIf { question -> randomElements.contains(question) }
+        }
+        return questionsList
     }
 
     private fun setQuestion() {
