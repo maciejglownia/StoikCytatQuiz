@@ -10,7 +10,7 @@ object Constants {
     // Location, under which are the details - can to retrieve them
     // when moving data from one activity to another.
     const val TOTAL_QUESTIONS: String = "total_questions"
-    const val CORRECT_ANSWERS:String = "correct_answers"
+    const val CORRECT_ANSWERS: String = "correct_answers"
 
     fun getQuestions(): ArrayList<Question> {
         val questionsList = ArrayList<Question>()
@@ -20,10 +20,10 @@ object Constants {
             "''Wiele jest ziarenek kadzielnych na jednym ołtarzu."
                     + " Jedne najpierw wpadają, inne później. " +
                     "A to nie stanowi różnicy.''",
-            "Epiktet",
+            "Epitktet z Hierapolis",
             "Marek Aureliusz",
-            "Seneka",
-            "Zenon z Kiton",
+            "Seneka Młodszy",
+            "Zenon z Kition",
             2
         )
         questionsList.add(question1)
@@ -32,10 +32,10 @@ object Constants {
             2,
             "Czyje to słowa?",
             "''Nie same zdarzenia budzą w ludziach niepokój, ale sądy o nich.''",
-            "Epiktet",
+            "Epitktet z Hierapolis",
             "Marek Aureliusz",
-            "Seneka",
-            "Zenon z Kiton",
+            "Seneka Młodszy",
+            "Zenon z Kition",
             1
         )
         questionsList.add(question2)
@@ -44,10 +44,10 @@ object Constants {
             3,
             "Czyje to słowa?",
             "''Lepiej jest sporządzić bilans dotyczący własnego życia, niż rynku zbóż.''",
-            "Epiktet",
+            "Epitktet z Hierapolis",
             "Marek Aureliusz",
-            "Seneka",
-            "Zenon z Kiton",
+            "Seneka Młodszy",
+            "Zenon z Kition",
             3
         )
         questionsList.add(question3)
@@ -58,10 +58,10 @@ object Constants {
             "''Uważam cię za pechowca, ponieważ nigdy nie zmierzyłes się " +
                     "z przeciwnościami losu. Przeszedłeś przez życie bez przeciwnika." +
                     "Nikt, nawet ty, nie wie do czego jesteś zdolny.''",
-            "Epiktet",
+            "Epitktet z Hierapolis",
             "Marek Aureliusz",
-            "Seneka",
-            "Zenon z Kiton",
+            "Seneka Młodszy",
+            "Zenon z Kition",
             3
         )
         questionsList.add(question4)
@@ -71,10 +71,10 @@ object Constants {
             "Czyje to słowa?",
             "''Został osadzony w więzieniu. Jednak spostrzeżenie " +
                     "> spotkało go zło < dodałeś już sam.''",
-            "Epiktet",
+            "Epitktet z Hierapolis",
             "Marek Aureliusz",
-            "Seneka",
-            "Zenon z Kiton",
+            "Seneka Młodszy",
+            "Zenon z Kition",
             1
         )
         questionsList.add(question5)
@@ -83,10 +83,10 @@ object Constants {
             6,
             "Czyje to słowa?",
             "''Mamy dwoje uszu i jedne usta, abyśmy słuchali dwa razy tyle, co mówili.''",
-            "Epiktet",
+            "Epitktet z Hierapolis",
             "Marek Aureliusz",
-            "Seneka",
-            "Zenon z Kiton",
+            "Seneka Młodszy",
+            "Zenon z Kition",
             4
         )
         questionsList.add(question6)
@@ -95,10 +95,10 @@ object Constants {
             7,
             "Czyje to słowa?",
             "''Skutki gniewu są dużo poważniejsze od jego przyczyny.''",
-            "Epiktet",
+            "Epitktet z Hierapolis",
             "Marek Aureliusz",
-            "Seneka",
-            "Zenon z Kiton",
+            "Seneka Młodszy",
+            "Zenon z Kition",
             2
         )
         questionsList.add(question7)
@@ -108,10 +108,10 @@ object Constants {
             "Czyje to słowa?",
             "''Fortuna pragnie abym miał więcej wolności by filozofować. " +
                     "(Na wieść o zatonięciu statku z prawie całym majątkiem)''",
-            "Epiktet",
+            "Epitktet z Hierapolis",
             "Marek Aureliusz",
-            "Seneka",
-            "Zenon z Kiton",
+            "Seneka Młodszy",
+            "Zenon z Kition",
             4
         )
         questionsList.add(question8)
@@ -121,27 +121,47 @@ object Constants {
             9,
             "Czyje to słowa?",
             "''Chętnego Losy prowadzą, niechętnego wloką.''",
-            "Epiktet",
+            "Epitktet z Hierapolis",
             "Marek Aureliusz",
-            "Seneka",
-            "Zenon z Kiton",
+            "Seneka Młodszy",
+            "Zenon z Kition",
             4
         )
         questionsList.add(question9)
 
-
         val question10 = Question(
             10,
-            "Czyje to słowa?",
-            "''Lekarstwem na przyzwyczajenie jest inne przyzwyczajenie''",
-            "Epiktet",
-            "Marek Aureliusz",
-            "Seneka",
-            "Zenon z Kiton",
-            1
+            questionString(),
+            quotesList().getValue(10),
+            possibilityAnswers().getValue(1),
+            possibilityAnswers().getValue(2),
+            possibilityAnswers().getValue(3),
+            possibilityAnswers().getValue(4),
+            correctAnswers().getValue(10)
         )
         questionsList.add(question10)
 
         return questionsList
+    }
+
+    private fun questionString(): String {
+        return "Czyje to słowa?"
+    }
+
+    private fun quotesList(): Map<Int, String> {
+        return mapOf(10 to "''Lekarstwem na przyzwyczajenie jest inne przyzwyczajenie''")
+    }
+
+    private fun possibilityAnswers(): Map<Int, String> {
+        return mapOf(
+            1 to "Epitktet z Hierapolis",
+            2 to "Marek Aureliusz",
+            3 to "Seneka Młodszy",
+            4 to "Zenon z Kition"
+        )
+    }
+
+    private fun correctAnswers(): Map<Int, Int> {
+        return mapOf(10 to 1)
     }
 }
