@@ -257,7 +257,11 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
                     if (mSelectedAnswerPosition != question!!.correctAnswer) {
                         answerView(mSelectedAnswerPosition, R.drawable.wrong_answer_border_bg)
                     } else {
-                        mCorrectAnswers++ // increment if answer is correct
+                        // Protect to count correct answer only when clicked on correct answer once
+                        var clicked = 0
+                        if (clicked == 0) {
+                            mCorrectAnswers++ // increment if answer is correct
+                        }
                     }
                     // Need to set correct answer on color for correct answer if users answer
                     // was either good or bad
