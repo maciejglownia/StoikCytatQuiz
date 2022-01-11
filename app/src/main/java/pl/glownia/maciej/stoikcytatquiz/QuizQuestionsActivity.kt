@@ -15,7 +15,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 
 // After AppCompatActivity() is View.OnClickListener to make things CLICKABLE
-// need to override onClick method because OnClickListener is an interface
+//  need to override onClick method because OnClickListener is an interface
 class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
 
     // Create here than we can use it inside all methods
@@ -68,22 +68,8 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
         tvAnswerFour?.setOnClickListener(this)
         btnNext?.setOnClickListener(this)
         // 
-        mQuestionsList = getRandomLimitedNumberOfQuestions()
+        mQuestionsList = Constants.getRandomLimitedNumberOfQuestions()
         setQuestion()
-    }
-
-    private fun getRandomLimitedNumberOfQuestions(): ArrayList<Question> {
-        val questionsList = Constants.getQuestion()
-        // Set how many question would like to display
-        val numberOfQuestionsToDisplay = 5
-        // To have numbers of questions as equals above it need to subtract this value from arraylist size
-        val randomElements =
-            questionsList.asSequence().shuffled()
-                .take(questionsList.size.minus(numberOfQuestionsToDisplay)).toList()
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            questionsList.removeIf { question -> randomElements.contains(question) }
-        }
-        return questionsList
     }
 
     private fun setQuestion() {

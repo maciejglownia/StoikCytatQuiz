@@ -1,5 +1,8 @@
 package pl.glownia.maciej.stoikcytatquiz
 
+import android.os.Build
+import kotlin.random.Random
+
 object Constants {
 
     // consts are compile time constants it means that their value has to be assigned
@@ -12,7 +15,24 @@ object Constants {
     const val TOTAL_QUESTIONS: String = "total_questions"
     const val CORRECT_ANSWERS: String = "correct_answers"
 
-    fun getQuestion(): ArrayList<Question> {
+    fun getRandomLimitedNumberOfQuestions(): ArrayList<Question> {
+        val questionsList = getQuestion()
+        // Set how many question would like to display
+        val numberOfQuestionsToDisplay = 2
+        // To have numbers of questions as equals above it need to subtract this value from arraylist size
+        val randomElements =
+            questionsList
+                .asSequence()
+                .take(questionsList.size.minus(numberOfQuestionsToDisplay))
+                .toList()
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            questionsList.removeIf { question -> randomElements.contains(question) }
+        }
+        questionsList.shuffle()
+        return questionsList
+    }
+
+    private fun getQuestion(): ArrayList<Question> {
         val questionListTest = ArrayList<Question>()
         val numberOfQuestions = quotes().size
         for (i in 1..numberOfQuestions) {
@@ -28,6 +48,7 @@ object Constants {
             )
             questionListTest.add(question)
         }
+        questionListTest.shuffle()
         return questionListTest
 
     }
