@@ -13,7 +13,7 @@
         android:id="@+id/tv_result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="50dp"
         android:gravity="center"
         android:text="@string/message_to_user_they_did_it"
         android:textColor="@color/black"
@@ -32,7 +32,7 @@
             android:layout_width="288dp"
             android:layout_height="230dp"
             android:layout_gravity="center"
-            android:layout_margin="25dp"
+            android:layout_margin="40dp"
             android:contentDescription="@string/laurel_wreath_image"
             android:src="@drawable/laurel_wreath" />
 
@@ -40,7 +40,6 @@
             android:id="@+id/tv_congratulation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
             android:text="@string/exclamation_mark_about_result"
             android:textColor="@color/black"
@@ -61,11 +60,11 @@
             android:id="@+id/btn_finish"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
+            android:layout_margin="50dp"
             android:background="@drawable/button_border_bg"
             android:padding="16dp"
             android:text="@string/finish_button_text"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"/>
 

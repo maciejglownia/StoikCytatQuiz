@@ -3,18 +3,17 @@
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_200">#FCA311</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFF</color>
-    <color name="stoic_text">#89896C</color>
+    <color name="stoic_text">#1E315C</color>
     <color name="stoic_answer_text">#001219</color>
-    <color name="stoic_button">#7E7E63</color>
-    <color name="stoic_light_bg">#C9C9BA</color>
-    <color name="stoic_dark_bg">#89896C</color>
-    <color name="stoic_one_of_answers_frame">#EEDFD3</color>
+    <color name="stoic_button">#1E315C</color>
+    <color name="stoic_light_bg">#F5F5F5</color>
+    <color name="stoic_dark_bg">#1E315C</color>
+    <color name="stoic_one_of_answers_frame">#CCCCCC</color>
     <color name="stoic_good_answer_frame">#C9C9BA</color>
-    <color name="main_background">#C9C9BA</color>
-
-
+    <color name="main_background">#E5E5E5</color>
+    <color name="correct_answer_bg">#81b29a</color>
 </resources>

@@ -1,13 +1,13 @@
 <resources>
     <string name="app_name">Stoik Cytat Quiz</string>
-    <string name="start_text_to_user">Przed Tobą krótki Quiz!\n Sprawdź czy wiesz, \n kto jest autorem \n przedstwionych tutaj myśli.</string>
-    <string name="welcome_message">Miło, że jesteś!</string>
+    <string name="start_text_to_user">Przed Tobą krótki quiz!\n Sprawdź czy wiesz, \n kto jest autorem \n przedstwionych tutaj myśli.</string>
+    <string name="welcome_message">miło, że jesteś!</string>
     <string name="next_button">Dalej</string>
-    <string name="hello_message">Cześć!</string>
+    <string name="hello_message">Cześć,</string>
     <string name="question_before_quote">question</string>
     <string name="laurel_wreath_image">laurel_wreath</string>
-    <string name="message_about_result">Twój wynik na 0 z 9 pytań</string>
-    <string name="finish_button_text">CHCĘ ZAKOŃCZYĆ QUIZ</string>
+    <string name="message_about_result">Twój wynik na 0 z 0 pytań</string>
+    <string name="finish_button_text">ZAKOŃCZ QUIZ</string>
     <string name="exclamation_mark_about_result">Twój wynik!</string>
-    <string name="message_to_user_they_did_it">Zrobiłeś to!</string>
+    <string name="message_to_user_they_did_it">Gratulacje!</string>
 </resources>
