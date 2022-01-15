@@ -93,12 +93,8 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
         tvAnswerThree?.text = question.answer3
         tvAnswerFour?.text = question.answer4
 
-        // Set the button based on, if it is next question or last click at the end
-        if (mCurrentPosition == mQuestionsList!!.size) {
-            btnNext?.text = "KONIEC"    // "THE END"
-        } else {
-            btnNext?.text = "POTWIERDŹ" // "CONFIRM"
-        }
+        // Set the button for "CONFIRM" text to let user confirm their choice
+        btnNext?.text = "POTWIERDŹ" // "CONFIRM"
     }
 
     // Set the default answers when the new position is loaded or when the answer is reselected
