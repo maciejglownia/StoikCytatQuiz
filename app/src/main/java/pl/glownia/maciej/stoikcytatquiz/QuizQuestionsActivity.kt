@@ -67,7 +67,7 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
         tvAnswerFour?.setOnClickListener(this)
         btnNext?.setOnClickListener(this)
         // 
-        mQuestionsList = Constants.getRandomLimitedNumberOfQuestions()
+        mQuestionsList = QuestionsRandomizer.getRandomLimitedNumberOfQuestions()
         setQuestion()
     }
 
