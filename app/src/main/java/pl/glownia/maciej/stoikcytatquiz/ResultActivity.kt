@@ -48,7 +48,7 @@ class ResultActivity : AppCompatActivity() {
         tvScore.text = resultText
 
         btnFinish.setOnClickListener {
-            startActivity(Intent(this@ResultActivity, MainActivity::class.java))
+            startActivity(Intent(this@ResultActivity, MenuActivity::class.java))
         }
     }
 }
