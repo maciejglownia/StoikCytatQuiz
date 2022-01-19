@@ -3,13 +3,11 @@ package pl.glownia.maciej.stoikcytatquiz
 import android.os.Build
 
 object QuestionsRandomizer {
+
     fun getRandomLimitedNumberOfQuestions(
-        numberOfQuestionBasedOnUserChoiceFormat: Int
+        numberOfQuestionsToDisplay: Int
     ): ArrayList<Question> {
         val questionsList = getQuestion()
-        // Set how many question would like to display
-        var numberOfQuestionsToDisplay = numberOfQuestionBasedOnUserChoiceFormat
-
         // To have numbers of questions as equals above it need to subtract this value from arraylist size
         val randomElements =
             questionsList
