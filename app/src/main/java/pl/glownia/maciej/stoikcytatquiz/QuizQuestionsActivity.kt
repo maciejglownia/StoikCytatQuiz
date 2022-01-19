@@ -1,10 +1,8 @@
 package pl.glownia.maciej.stoikcytatquiz
 
 import android.content.Intent
-import android.content.res.ColorStateList
 import android.graphics.Color
 import android.graphics.Typeface
-import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -66,8 +64,13 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
         tvAnswerThree?.setOnClickListener(this)
         tvAnswerFour?.setOnClickListener(this)
         btnNext?.setOnClickListener(this)
-        // 
-        mQuestionsList = QuestionsRandomizer.getRandomLimitedNumberOfQuestions()
+
+        // Retrieve parameter from button from MenuActivity to pass it to QuestionRandomizer
+        var numberOfQuestionsToDisplay = intent.getIntExtra(
+            "numberOfQuestionsToDisplay", 0
+        )
+        mQuestionsList = QuestionsRandomizer
+            .getRandomLimitedNumberOfQuestions(numberOfQuestionsToDisplay)
         setQuestion()
     }
 
@@ -98,8 +101,8 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     // Set the default answers when the new position is loaded or when the answer is reselected
-    // It's going to reset basically the colors of the selected answers,
-    // then we can just set it to other color
+// It's going to reset basically the colors of the selected answers,
+// then we can just set it to other color
     private fun defaultAnswersView() {
         // List of text views, which are my four text use that I can select from
         val answers = ArrayList<TextView>()
@@ -134,7 +137,7 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     // We need to know which text we need to change and then we need
-    // to know which answer it was (arguments -> answer number (Int))
+// to know which answer it was (arguments -> answer number (Int))
     private fun selectedAnswerView(tv: TextView, selectedAnswerNumber: Int) {
         //Set every single button to its normal state
         defaultAnswersView()
@@ -150,7 +153,7 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     // Assign the color
-    // This method requires context as an integer, which is drawable resources ID
+// This method requires context as an integer, which is drawable resources ID
     private fun answerView(answer: Int, drawableView: Int) {
         when (answer) {
             1 -> {
