@@ -57,7 +57,7 @@ object QuestionsRandomizer {
             7 to "''Skutki gniewu są dużo poważniejsze od jego przyczyny.''",
             8 to "''Fortuna pragnie abym miał więcej wolności by filozofować. (Na wieść o zatonięciu statku z prawie całym majątkiem)''",
             9 to "''Chętnego Losy prowadzą, niechętnego wloką.''",
-            10 to "''Lekarstwem na przyzwyczajenie jest inne przyzwyczajenie''",
+            10 to "''Lekarstwem na przyzwyczajenie jest inne przyzwyczajenie.''",
             11 to "''Jeśli chcesz być czytelnikiem, czytaj, jeśli pisarzem, pisz.''",
             12 to "''Mędrzec nie będzie twierdzić tego, co mu się tylko wydaje, i dzięki temu nigdy nie przytaknie fałszowi.''",
             13 to "''Na tym właśnie polega dzielność szczęśliwego i pogodnego życia, że wszystko się czyni zgodnie z własnym głosem wewnętrznym i z wolą rządcy Wszechświata.''",
