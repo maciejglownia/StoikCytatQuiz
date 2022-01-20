@@ -40,6 +40,8 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
     private var tvAnswerFour: TextView? = null
     private var btnNext: Button? = null
 
+    var mBackPressedTime: Long = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz_questions)
@@ -277,5 +279,21 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
                 }
             }
         }
+    }
+
+    //  We will override onBackPressed() method. With the first press of the back button,
+    //  we will store the current system time, and display a toast. If the user presses
+    //  the back button again within 3 seconds we will call the finish() method.
+    override fun onBackPressed() {
+        if (mBackPressedTime + 3000 > System.currentTimeMillis()) {
+            super.onBackPressed()
+            finish()
+        } else {
+            Toast.makeText(
+                this, "Jeśli chcesz zakończyć quiz, naciśnij cofnij ponownie",
+                Toast.LENGTH_LONG)
+                .show()
+        }
+        mBackPressedTime = System.currentTimeMillis()
     }
 }
