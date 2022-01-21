@@ -10,4 +10,6 @@
     <string name="finish_button_text">ZAKOŃCZ QUIZ</string>
     <string name="exclamation_mark_about_result">Twój wynik!</string>
     <string name="message_to_user_they_did_it">Gratulacje!</string>
+    <string name="custom_dialog_no">NIE</string>
+    <string name="custom_dialog_yes">TAK</string>
 </resources>
