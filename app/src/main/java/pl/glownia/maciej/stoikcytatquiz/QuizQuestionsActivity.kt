@@ -1,5 +1,6 @@
 package pl.glownia.maciej.stoikcytatquiz
 
+import android.app.Dialog
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
@@ -9,6 +10,7 @@ import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 
@@ -281,19 +283,26 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
-    //  We will override onBackPressed() method. With the first press of the back button,
-    //  we will store the current system time, and display a toast. If the user presses
-    //  the back button again within 3 seconds we will call the finish() method.
+    // Override onBackPressed() method. Call customDialogFunction()
     override fun onBackPressed() {
-        if (mBackPressedTime + 3000 > System.currentTimeMillis()) {
-            super.onBackPressed()
-            finish()
-        } else {
-            Toast.makeText(
-                this, "Jeśli chcesz zakończyć quiz, naciśnij cofnij ponownie",
-                Toast.LENGTH_LONG)
-                .show()
+        customDialogFunction()
+    }
+
+    // Set up custom dialog when user click back button during taking the quiz
+    private fun customDialogFunction() {
+        val customDialog = Dialog(this)
+        // Set the screen content from a layout resource.
+        // The resource will be inflated, adding all top-level views to the screen
+        customDialog.setContentView(R.layout.dialog_custom_back_button)
+        customDialog.findViewById<TextView>(R.id.tv_submit).setOnClickListener {
+            customDialog.dismiss() // Dialog will be dismissed
+            val intent = Intent(this@QuizQuestionsActivity, MenuActivity::class.java)
+            startActivity(intent)
         }
-        mBackPressedTime = System.currentTimeMillis()
+        customDialog.findViewById<TextView>(R.id.tv_cancel).setOnClickListener {
+            customDialog.dismiss()
+        }
+        //Start the dialog and display it on screen.
+        customDialog.show()
     }
 }
