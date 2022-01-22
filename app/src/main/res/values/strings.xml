@@ -8,8 +8,9 @@
     <string name="laurel_wreath_image">laurel_wreath</string>
     <string name="message_about_result">Twój wynik na 0 z 0 pytań</string>
     <string name="finish_button_text">ZAKOŃCZ QUIZ</string>
-    <string name="exclamation_mark_about_result">Twój wynik!</string>
+    <string name="exclamation_mark_about_result">Twój wynik:</string>
     <string name="message_to_user_they_did_it">Gratulacje!</string>
     <string name="custom_dialog_no">NIE</string>
     <string name="custom_dialog_yes">TAK</string>
+    <string name="message_based_on_result">Message based on result</string>
 </resources>

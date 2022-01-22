@@ -10,7 +10,6 @@ import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 
@@ -42,8 +41,6 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
     private var tvAnswerFour: TextView? = null
     private var btnNext: Button? = null
 
-    var mBackPressedTime: Long = 0
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz_questions)
@@ -70,7 +67,7 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
         btnNext?.setOnClickListener(this)
 
         // Retrieve parameter from button from MenuActivity to pass it to QuestionRandomizer
-        var numberOfQuestionsToDisplay = intent.getIntExtra(
+        val numberOfQuestionsToDisplay = intent.getIntExtra(
             "numberOfQuestionsToDisplay", 0
         )
         mQuestionsList = QuestionsRandomizer
@@ -86,12 +83,12 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
         // Because the question list is nullable we have to make here double ! to force it
         // Because we are sure that question list is not going to be empty at this point
         // Get the question
-        val question: Question = mQuestionsList!![mCurrentPosition - 1] // -1 because ArrayList
-        // Set everything we need
+        val question: Question = mQuestionsList!![mCurrentPosition - 1]// Set everything we need
         progressBar?.progress = mCurrentPosition
         progressBar?.max = mQuestionsList!!.size
         // e.g. 1/10 - depends on size of ArrayList - so on quantity of questions/quotes
-        tvProgress?.text = "$mCurrentPosition/${mQuestionsList!!.size}"
+        val progressNumbers = "$mCurrentPosition/${mQuestionsList!!.size}"
+        tvProgress?.text = progressNumbers
         // Set text question and answers
         tvQuestion?.text = question.question
         tvQuote?.text = question.quote
