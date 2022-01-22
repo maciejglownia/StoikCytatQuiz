@@ -3,8 +3,10 @@ package pl.glownia.maciej.stoikcytatquiz
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 
 class ResultActivity : AppCompatActivity() {
 
@@ -22,6 +24,10 @@ class ResultActivity : AppCompatActivity() {
         // intExtra cause mCorrectAnswers in QuizQuestionsActivity is Int
         val totalQuestions = intent.getIntExtra(Constants.TOTAL_QUESTIONS, 0)
         val correctAnswers = intent.getIntExtra(Constants.CORRECT_ANSWERS, 0)
+
+        val tvMessageBasedOnResult: TextView = findViewById(R.id.tv_message_based_on_result)
+        val messageToUser = textToUserBasedOnQuizResult()
+        tvMessageBasedOnResult.text = messageToUser
 
         // Different endings in Polish depends on correctAnswers and/or totalQuestions
         resultCorrectAnswersWordInPolish =
@@ -79,5 +85,34 @@ class ResultActivity : AppCompatActivity() {
             resultCorrectAnswersWordInPolish1 = "poprawnych"
         }
         return resultCorrectAnswersWordInPolish1
+    }
+
+    private fun textToUserBasedOnQuizResult(): String {
+        val result = calculateResultLevel()
+        val laurelWreath: ImageView = findViewById(R.id.iv_laurel_wreath)
+
+        if (result < 0 || result > 100) {
+            return "Coś poszło nie tak. Błąd aplikacji." // "Something went wrong. App doesn't work properly."
+        } else if (result == 100) {
+            return "Bezbłędnie! Wspaniały wynik!." // "Faultlessly! Great result!"
+        } else if (result in 91..99) {
+            with(laurelWreath) { setColorFilter(ContextCompat.getColor(context, R.color.silver)) }
+            return "Bardzo dobry wynik. Tak trzymaj." // "Very good result. Keep it up."
+        } else if (result in 51..90) {
+            with(laurelWreath) { setColorFilter(ContextCompat.getColor(context, R.color.bronze)) }
+            return "Więcej niż połowa, ale stać cię na więcej." // More than half, but you can do better.
+        } else if (result in 31..49) {
+            with(laurelWreath) { setColorFilter(ContextCompat.getColor(context, R.color.black)) }
+            return "Widać braki. Nie łam się. Czyń postępy!" // Yours gap in knowledge are visible. Don't worry. Do the progress.
+        } else {
+            with(laurelWreath) { setColorFilter(ContextCompat.getColor(context, R.color.black)) }
+            return "Nie przejmuj się, ale poświęć więcej czasu na czytanie." // "Don't worry, but spend more time reading."
+        }
+    }
+
+    private fun calculateResultLevel(): Int {
+        val totalQuestions = intent.getIntExtra(Constants.TOTAL_QUESTIONS, 0)
+        val correctAnswers = intent.getIntExtra(Constants.CORRECT_ANSWERS, 0)
+        return correctAnswers * 100 / totalQuestions
     }
 }
