@@ -7,6 +7,7 @@ import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.Dispatchers
@@ -22,36 +23,39 @@ class MenuActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
 
-        val buttonOneQuestion : Button = findViewById(R.id.btn_one_question)
-        buttonOneQuestion.setOnClickListener{
-            showProgressDialog()
-            val intent = Intent(this@MenuActivity, QuizQuestionsActivity::class.java)
-                intent.putExtra(
-                    "numberOfQuestionsToDisplay", 1)
-                startActivity(intent)
-            lifecycleScope.launch {
-                execute()
-            }
-        }
-
-        val buttonTenQuestions : Button = findViewById(R.id.btn_ten_questions)
-        buttonTenQuestions.setOnClickListener{
-            showProgressDialog()
-                val intent = Intent(this@MenuActivity, QuizQuestionsActivity::class.java)
-                intent.putExtra(
-                    "numberOfQuestionsToDisplay", 10)
-                startActivity(intent)
-            lifecycleScope.launch {
-                execute()
-            }
-        }
-
-        val buttonFortyQuestions : Button = findViewById(R.id.btn_forty_questions)
-        buttonFortyQuestions.setOnClickListener{
+        val buttonOneQuestion: Button = findViewById(R.id.btn_one_question)
+        buttonOneQuestion.setOnClickListener {
             showProgressDialog()
             val intent = Intent(this@MenuActivity, QuizQuestionsActivity::class.java)
             intent.putExtra(
-                "numberOfQuestionsToDisplay", 40)
+                "numberOfQuestionsToDisplay", 1
+            )
+            startActivity(intent)
+            lifecycleScope.launch {
+                execute()
+            }
+        }
+
+        val buttonTenQuestions: Button = findViewById(R.id.btn_ten_questions)
+        buttonTenQuestions.setOnClickListener {
+            showProgressDialog()
+            val intent = Intent(this@MenuActivity, QuizQuestionsActivity::class.java)
+            intent.putExtra(
+                "numberOfQuestionsToDisplay", 10
+            )
+            startActivity(intent)
+            lifecycleScope.launch {
+                execute()
+            }
+        }
+
+        val buttonFortyQuestions: Button = findViewById(R.id.btn_forty_questions)
+        buttonFortyQuestions.setOnClickListener {
+            showProgressDialog()
+            val intent = Intent(this@MenuActivity, QuizQuestionsActivity::class.java)
+            intent.putExtra(
+                "numberOfQuestionsToDisplay", 40
+            )
             startActivity(intent)
             lifecycleScope.launch {
                 execute()
@@ -88,7 +92,7 @@ class MenuActivity : AppCompatActivity() {
                 // Once we are done and we start running something on the wife thread
                 // We can cancel it in the thread
                 cancelProgressDialog()
-             }
+            }
         }
     }
 
@@ -123,5 +127,10 @@ class MenuActivity : AppCompatActivity() {
             customProgressDialog?.dismiss()
             customProgressDialog = null
         }
+    }
+
+    override fun onBackPressed() {
+        val intent = Intent(this@MenuActivity, MainActivity::class.java)
+        startActivity(intent)
     }
 }
