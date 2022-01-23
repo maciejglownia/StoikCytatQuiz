@@ -8,7 +8,6 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.Dispatchers
@@ -35,7 +34,7 @@ class MenuActivity : AppCompatActivity() {
             showProgressDialog()
             val intent = Intent(this@MenuActivity, QuizQuestionsActivity::class.java)
             intent.putExtra(
-                "numberOfQuestionsToDisplay", 1
+                "numberOfQuestionsToDisplay", 0
             )
             startActivity(intent)
             lifecycleScope.launch {
@@ -48,7 +47,7 @@ class MenuActivity : AppCompatActivity() {
             showProgressDialog()
             val intent = Intent(this@MenuActivity, QuizQuestionsActivity::class.java)
             intent.putExtra(
-                "numberOfQuestionsToDisplay", 10
+                "numberOfQuestionsToDisplay", 9
             )
             startActivity(intent)
             lifecycleScope.launch {
@@ -61,7 +60,7 @@ class MenuActivity : AppCompatActivity() {
             showProgressDialog()
             val intent = Intent(this@MenuActivity, QuizQuestionsActivity::class.java)
             intent.putExtra(
-                "numberOfQuestionsToDisplay", 40
+                "numberOfQuestionsToDisplay", 39
             )
             startActivity(intent)
             lifecycleScope.launch {

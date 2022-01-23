@@ -71,7 +71,7 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
             "numberOfQuestionsToDisplay", 0
         )
         mQuestionsList = QuestionsRandomizer
-            .getRandomLimitedNumberOfQuestions(numberOfQuestionsToDisplay)
+            .getRandomLimitedNumberOfQuestions(numberOfQuestionsToDisplay + 1)
         setQuestion()
     }
 
