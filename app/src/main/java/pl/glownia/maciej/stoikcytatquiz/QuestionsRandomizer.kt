@@ -142,7 +142,7 @@ object QuestionsRandomizer {
             92 to "''Powinniśmy mieć zasady gotowe do zastosowania w każdej okoliczności.''",
             93 to "''Najpierw powiedz do siebie, jaki mógłbyś być, a potem zrób to co musisz zrobić.''",
             94 to "''Największą przysługę oddacie Państwu, podnosząc nie dachy domów, ale dusze współobywateli.''",
-            95 to "''Opatrzność dała mężczyzną zarost, aby można ich było odróżnić od kobiet.''",
+            95 to "''Prawdziwym panem i królem jest jedynie mędrzec, który uwolnił się od namiętności i niczego nie potrzebuje.''",
             96 to "''Tylko ludzie intelektualnie rozwinięci są wolni.''",
             97 to "''Każdy żyje tylko tą oto teraźniejszością, chwilką. Wszystko zaś inne alboś przeżył, albo niepewne.''",
             98 to "''Boją sie ludzie przemiany. A co może dziać się bez przemiany? Co jest milsze i zwyklejsze dla wszechnatury? Możesz-że się wykąpać, jeżeli drzewo nie ulega przemianie?''",

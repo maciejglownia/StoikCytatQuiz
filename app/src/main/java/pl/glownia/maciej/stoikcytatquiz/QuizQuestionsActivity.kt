@@ -102,8 +102,8 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     // Set the default answers when the new position is loaded or when the answer is reselected
-// It's going to reset basically the colors of the selected answers,
-// then we can just set it to other color
+    // It's going to reset basically the colors of the selected answers,
+    // then we can just set it to other color
     private fun defaultAnswersView() {
         // List of text views, which are my four text use that I can select from
         val answers = ArrayList<TextView>()
@@ -138,11 +138,10 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     // We need to know which text we need to change and then we need
-// to know which answer it was (arguments -> answer number (Int))
+    // to know which answer it was (arguments -> answer number (Int))
     private fun selectedAnswerView(tv: TextView, selectedAnswerNumber: Int) {
         //Set every single button to its normal state
         defaultAnswersView()
-
         mSelectedAnswerPosition = selectedAnswerNumber
         // Set text view after click on it
         tv.setTextColor(Color.parseColor("#001219"))
@@ -154,7 +153,7 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     // Assign the color
-// This method requires context as an integer, which is drawable resources ID
+    // This method requires context as an integer, which is drawable resources ID
     private fun answerView(answer: Int, drawableView: Int) {
         when (answer) {
             1 -> {
@@ -220,10 +219,10 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
                     // Make sure that one of answers is clicked
                     if (mSelectedAnswerPosition == 0 &&
                         btnNext!!.text.equals("POTWIERDŹ")  // "CONFIRM"
-                    ) {   // "CONFIRM"
+                    ) {
                         Toast.makeText(
                             this,
-                            "Zaznacz odpowiedź!", Toast.LENGTH_SHORT    // "PICK THE ANSWER"
+                            "Zaznacz odpowiedź!", Toast.LENGTH_SHORT    // "Mark the answer"
                         ).show()
                     } else {
                         mCurrentPosition++
@@ -257,7 +256,7 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
                         answerView(mSelectedAnswerPosition, R.drawable.wrong_answer_border_bg)
                     } else {
                         // Protect to count correct answer only when clicked on correct answer once
-                        var clicked = 0
+                        val clicked = 0
                         if (clicked == 0) {
                             mCorrectAnswers++ // increment if answer is correct
                         }

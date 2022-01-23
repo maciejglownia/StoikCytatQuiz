@@ -13,4 +13,6 @@
     <string name="custom_dialog_no">NIE</string>
     <string name="custom_dialog_yes">TAK</string>
     <string name="message_based_on_result">Message based on result</string>
+    <string name="Are_you_sure_you_want_quit_the_quiz">Czy jesteś pewien, że chcesz zakończyć quiz?</string>
+    <string name="decite_for_how_many_questions_you_are_ready">Zdecyduj na ile pytań jesteś gotowy:</string>
 </resources>

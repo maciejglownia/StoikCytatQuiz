@@ -94,15 +94,15 @@ class ResultActivity : AppCompatActivity() {
         if (result < 0 || result > 100) {
             return "Coś poszło nie tak. Błąd aplikacji." // "Something went wrong. App doesn't work properly."
         } else if (result == 100) {
-            return "Bezbłędnie! Wspaniały wynik!." // "Faultlessly! Great result!"
+            return "Bezbłędnie! Wspaniały wynik!" // "Faultlessly! Great result!"
         } else if (result in 91..99) {
             with(laurelWreath) { setColorFilter(ContextCompat.getColor(context, R.color.silver)) }
             return "Bardzo dobry wynik. Tak trzymaj." // "Very good result. Keep it up."
-        } else if (result in 51..90) {
+        } else if (result in 60..89) {
             with(laurelWreath) { setColorFilter(ContextCompat.getColor(context, R.color.bronze)) }
             return "Więcej niż połowa, ale stać cię na więcej." // More than half, but you can do better.
-        } else if (result in 31..49) {
-            with(laurelWreath) { setColorFilter(ContextCompat.getColor(context, R.color.black)) }
+        } else if (result in 40..59) {
+            with(laurelWreath) { setColorFilter(ContextCompat.getColor(context, R.color.olive)) }
             return "Widać braki. Nie łam się. Czyń postępy!" // Yours gap in knowledge are visible. Don't worry. Do the progress.
         } else {
             with(laurelWreath) { setColorFilter(ContextCompat.getColor(context, R.color.black)) }
