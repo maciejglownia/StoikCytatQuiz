@@ -28,4 +28,5 @@
     <string name="info_about">O aplikacji</string>
     <string name="app_version">Version 1.0.0</string>
     <string name="settings_in_settings">Ustawienia</string>
+    <string name="app_description">O aplikacji</string>
 </resources>
