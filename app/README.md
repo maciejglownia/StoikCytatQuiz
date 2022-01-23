@@ -18,6 +18,12 @@ This app contains thoughts of 4 stoics:
    of they answers (counted) related to total number of questions.
 7. Last option for user is to finish quiz.
 8. Quotes I keep in HashMap.
+9. There is also settings activity when user can:
+   a) send mail to developer,
+   b) read privacy policy,
+   c) rate app in the google store,
+   d) read description about application,
+   e) check the version of app - available at the bottom of layout.
 
 Of course there is space to develop this app for different features.
 
@@ -37,9 +43,14 @@ Of course there is space to develop this app for different features.
 1. I should write README.md up to date -> now it is difficult to put everything in nice order
    with more details and also with thoughts which I had in various points during develop this app,
 2. How to set up:
-   - program buttons to work in different goal,- layouts,
+   - program buttons to work in different goal,
+   - layouts,
+   - back button,
+   - gradle,
+   - intent to send mail to developer,
 3. How to add:
    - different functionality as drawable, buttons, textViews etc.
+   - dialog (alert dialog) when user click back button
 4. Important elements and functions, as:
    - make working all buttons and text view,
    - cardView,
@@ -52,6 +63,8 @@ Of course there is space to develop this app for different features.
    - passing and retrieving data via intent  
    - part of collections,
    - null safety,
+   - generate privacy policy,
+5. Publish application on Play Store
    
 ### Summary ###
 There are many concepts, more of them I saw first time. They need to repeat to understand it better, 
