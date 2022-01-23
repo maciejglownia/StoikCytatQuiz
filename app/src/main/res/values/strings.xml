@@ -20,4 +20,10 @@
     <string name="ten_questions">10 PYTAŃ</string>
     <string name="one_question">1 pytanie</string>
     <string name="settings_dots">settings_dots</string>
+    <string name="contact_icon">email_icon</string>
+    <string name="rate_icon">rate_icon</string>
+    <string name="privacy_policy_field">Polityka prywatności</string>
+    <string name="contact_field">Kontakt</string>
+    <string name="rate_field">Oceń aplikację</string>
+    <string name="info_about">O aplikacji</string>
 </resources>
