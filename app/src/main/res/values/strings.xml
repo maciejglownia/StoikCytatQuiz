@@ -26,4 +26,6 @@
     <string name="contact_field">Kontakt</string>
     <string name="rate_field">Oceń aplikację</string>
     <string name="info_about">O aplikacji</string>
+    <string name="app_version">Version 1.0.0</string>
+    <string name="settings_in_settings">Ustawienia</string>
 </resources>
