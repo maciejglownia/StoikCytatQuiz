@@ -7,6 +7,7 @@ import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
@@ -22,6 +23,12 @@ class MenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
+
+        val settingsImageButton: ImageView = findViewById(R.id.settings_image_button)
+        settingsImageButton.setOnClickListener {
+            val intent = Intent(this@MenuActivity, SettingsActivity::class.java)
+            startActivity(intent)
+        }
 
         val buttonOneQuestion: Button = findViewById(R.id.btn_one_question)
         buttonOneQuestion.setOnClickListener {
