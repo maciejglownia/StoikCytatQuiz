@@ -15,4 +15,9 @@
     <string name="message_based_on_result">Message based on result</string>
     <string name="Are_you_sure_you_want_quit_the_quiz">Czy jesteś pewien, że chcesz zakończyć quiz?</string>
     <string name="decite_for_how_many_questions_you_are_ready">Zdecyduj na ile pytań jesteś gotowy:</string>
+    <string name="settings_button">settings_button</string>
+    <string name="forty_questions">40 PYTAŃ</string>
+    <string name="ten_questions">10 PYTAŃ</string>
+    <string name="one_question">1 pytanie</string>
+    <string name="settings_dots">settings_dots</string>
 </resources>

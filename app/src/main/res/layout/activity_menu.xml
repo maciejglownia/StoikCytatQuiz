@@ -2,20 +2,31 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/main_background"
     android:layout_height="match_parent"
+    android:background="@color/main_background"
     android:gravity="center_horizontal"
     android:orientation="vertical"
     tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/image_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="@color/transparent"
+        android:contentDescription="@string/settings_dots"
+        android:src="@drawable/settings_dots" />
 
     <TextView
         android:id="@+id/tv_result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
         android:layout_marginStart="50dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="50dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="40dp"
         android:gravity="center"
         android:text="@string/decite_for_how_many_questions_you_are_ready"
         android:textColor="@color/black"
@@ -32,37 +43,46 @@
             android:id="@+id/btn_one_question"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="40dp"
             android:background="@drawable/button_border_bg"
             android:padding="16dp"
-            android:text="1 pytanie"
+            android:text="@string/one_question"
             android:textColor="@color/white"
             android:textSize="18sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btn_ten_questions"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="40dp"
             android:background="@drawable/button_border_bg"
             android:padding="16dp"
-            android:text="10 PYTAŃ"
+            android:text="@string/ten_questions"
             android:textColor="@color/white"
             android:textSize="18sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
+
         <Button
             android:id="@+id/btn_forty_questions"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="40dp"
             android:background="@drawable/button_border_bg"
             android:padding="16dp"
-            android:text="40 PYTAŃ"
+            android:text="@string/forty_questions"
             android:textColor="@color/white"
             android:textSize="18sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
     </LinearLayout>
-
 </LinearLayout>
