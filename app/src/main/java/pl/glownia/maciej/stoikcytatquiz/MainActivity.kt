@@ -7,11 +7,6 @@ import android.widget.Button
 import android.widget.Toast
 import kotlin.system.exitProcess
 
-
-/**
- * Welcome activity.
- * Displayed only once at the beginning.
- */
 class MainActivity : AppCompatActivity() {
     private var mPressedTime: Long = 0
 
