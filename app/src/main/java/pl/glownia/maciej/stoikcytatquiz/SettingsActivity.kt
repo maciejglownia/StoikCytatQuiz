@@ -73,9 +73,9 @@ class SettingsActivity : AppCompatActivity() {
                     "otrzymuje na koniec trofeum w postaci wieńca laurowego. " +
                     "\nKolory wieńca (kolejno od największej ilości punktów, procent poprawnych odpowiedzi):" +
                     "\n\n 1. Złoty -> 100%" +
-                    "\n 2. Srebrny -> 90 - 99%" +
-                    "\n 3. Brązowy -> 70 - 89%" +
-                    "\n 4. Oliwkowy -> 40 - 69%" +
+                    "\n 2. Srebrny -> 80 - 99%" +
+                    "\n 3. Brązowy -> 60 - 79%" +
+                    "\n 4. Oliwkowy -> 40 - 59%" +
                     "\n 5. Czarny -> 0 - 39%" +
                     "\n\nMam nadzieję, że ten quiz będzie nie tylko dobrą zabawą, ale także pozwoli " +
                     "lepiej zapamiętać ponadczasowe myśli stoickie." +
