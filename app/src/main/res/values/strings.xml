@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Stoik Cytat Quiz</string>
-    <string name="start_text_to_user">Przed Tobą krótki quiz!\n Sprawdź czy wiesz, \n kto jest autorem \n przedstwionych tutaj myśli.</string>
+    <string name="start_text_to_user">Przed Tobą krótki quiz! Sprawdź czy wiesz, kto jest autorem przedstwionych tutaj myśli.</string>
     <string name="welcome_message">miło, że jesteś!</string>
     <string name="next_button">Dalej</string>
     <string name="hello_message">Cześć,</string>
@@ -13,7 +13,7 @@
     <string name="custom_dialog_no">NIE</string>
     <string name="custom_dialog_yes">TAK</string>
     <string name="message_based_on_result">Message based on result</string>
-    <string name="Are_you_sure_you_want_quit_the_quiz">Czy jesteś pewien, że chcesz zakończyć quiz?</string>
+    <string name="Are_you_sure_you_want_quit_the_quiz">Czy na pewno chcesz zakończyć quiz?</string>
     <string name="decite_for_how_many_questions_you_are_ready">Zdecyduj na ile pytań jesteś gotowy:</string>
     <string name="settings_button">settings_button</string>
     <string name="forty_questions">40 PYTAŃ</string>

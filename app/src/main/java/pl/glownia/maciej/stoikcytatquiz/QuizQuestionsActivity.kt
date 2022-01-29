@@ -281,11 +281,11 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
 
     // Override onBackPressed() method. Call customDialogFunction()
     override fun onBackPressed() {
-        customDialogFunction()
+        customDialogForBackButton()
     }
 
     // Set up custom dialog when user click back button during taking the quiz
-    private fun customDialogFunction() {
+    private fun customDialogForBackButton() {
         val customDialog = Dialog(this)
         // Set the screen content from a layout resource.
         // The resource will be inflated, adding all top-level views to the screen
