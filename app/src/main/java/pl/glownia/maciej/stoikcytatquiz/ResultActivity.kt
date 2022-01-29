@@ -44,7 +44,8 @@ class ResultActivity : AppCompatActivity() {
         tvScore.text = resultText
 
         btnFinish.setOnClickListener {
-            startActivity(Intent(this@ResultActivity, MenuActivity::class.java))
+            //startActivity(Intent(this@ResultActivity, MenuActivity::class.java))
+            finish() // <- better option to clean stack
         }
     }
 
@@ -104,11 +105,11 @@ class ResultActivity : AppCompatActivity() {
         } else if (result in 40..59) {
             with(laurelWreath) { setColorFilter(ContextCompat.getColor(context, R.color.olive)) }
             return "Widać braki, ale nie łam się. Czyń postępy!" // Yours gap in knowledge are
-                                                    // visible,but don't worry. Do the progress.
+            // visible, but don't worry. Do the progress.
         } else {
             with(laurelWreath) { setColorFilter(ContextCompat.getColor(context, R.color.black)) }
             return "Nie przejmuj się, ale poświęć więcej czasu na czytanie."
-                                                    // "Don't worry, but spend more time reading."
+            // "Don't worry, but spend more time reading."
         }
     }
 
