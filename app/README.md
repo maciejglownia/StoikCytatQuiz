@@ -3,7 +3,8 @@
 ### Goal ### 
 Create an app which let user test their knowledge about popular thoughts of stoics.
 Application is in polish language.
-This app contains thoughts of 4 stoics:
+This app contains thoughts of 4 stoics: Epictetus from Hierapolis, Marcus Aurelius, 
+Seneca the Younger and Zeno of Citium.
 
 #####Overview:#####
 1. First activity is to welcome user, 
@@ -13,12 +14,13 @@ This app contains thoughts of 4 stoics:
    there also good answer will be displayed,
 4. This layout also contain progress bar to show user which question actually is 
    and how many is in total,
-5. Application requires to check one of answer to go to the next question.
-6. At the end there is result activity were trophy is waiting for user. Also there is result 
+5. Application requires to check one of answer to go to the next question,
+6. If user press back button there is dialog to protect before accidentally finish the quiz,   
+7. At the end there is result activity were trophy is waiting for user. Also there is result 
    of they answers (counted) related to total number of questions.
-7. Last option for user is to finish quiz.
-8. Quotes I keep in HashMap.
-9. There is also settings activity when user can:
+8. Last option for user is to finish quiz.
+9. Quotes I keep in HashMap.
+10. There is also settings activity when user can:
    a) send mail to developer,
    b) read privacy policy,
    c) rate app in the google store,
@@ -38,6 +40,7 @@ Of course there is space to develop this app for different features.
 ### Requirements: ###
 1. Android Studio ArcticFox (2020.3.1) Stable,
 2. Minimal Sdk: 21 Recommended: 32.
+3. Size of device - minimum 5.00"
 
 ### What I have learned during this project? ###
 1. I should write README.md up to date -> now it is difficult to put everything in nice order
@@ -67,7 +70,7 @@ Of course there is space to develop this app for different features.
 5. Publish application on Play Store
    
 ### Summary ###
-There are many concepts, more of them I saw first time. They need to repeat to understand it better, 
-but I used many lines of comments to write down explanation and to understand, as good as possible, 
-what happen in this code, which functions are responsible for, and also why some concepts I should 
-use in that case.
+There are many concepts, more of them I saw first time. They need to be repeat to understand them 
+better, but I used many lines of comments to write down explanation to understand, as good as 
+possible, what happen in this code, which functions are responsible for, and also why some concepts 
+I should use in these case.

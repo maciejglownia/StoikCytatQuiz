@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,26 +8,30 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/tv_question"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="10dp"
             android:gravity="center"
-            tools:text="@string/question_before_quote"
             android:textColor="@color/black"
-            android:textSize="22sp" />
+            android:textSize="22sp"
+            android:textStyle="bold"
+            tools:text="@string/question_before_quote" />
 
         <TextView
             android:id="@+id/tv_quote"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:padding="20dp"
             android:gravity="center"
             android:textColor="@color/black"
             android:textSize="22sp"
@@ -37,7 +41,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -46,9 +49,10 @@
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:layout_marginEnd="10dp"
                 android:layout_weight="1"
                 android:indeterminate="false"
-                android:layout_marginStart="11dp"
                 android:max="10"
                 android:minHeight="50dp"
                 android:progress="0" />
@@ -58,9 +62,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textColorLink="#FCA311"
-                android:padding="15dp"
+                android:padding="10dp"
                 android:textColor="@color/stoic_answer_text"
+                android:textColorLink="#FCA311"
                 android:textSize="14sp"
                 tools:text="0/5" />
         </LinearLayout>
@@ -72,7 +76,7 @@
             android:layout_margin="10dp"
             android:background="@drawable/default_answer_border_bg"
             android:gravity="center"
-            android:padding="15dp"
+            android:padding="10dp"
             android:textColor="@color/stoic_answer_text"
             android:textSize="18sp"
             tools:text="stoic" />
@@ -84,7 +88,7 @@
             android:layout_margin="10dp"
             android:background="@drawable/default_answer_border_bg"
             android:gravity="center"
-            android:padding="15dp"
+            android:padding="10dp"
             android:textColor="@color/stoic_answer_text"
             android:textSize="18sp"
             tools:text="stoic" />
@@ -96,7 +100,7 @@
             android:layout_margin="10dp"
             android:background="@drawable/default_answer_border_bg"
             android:gravity="center"
-            android:padding="15dp"
+            android:padding="10dp"
             android:textColor="@color/stoic_answer_text"
             android:textSize="18sp"
             tools:text="stoic" />
@@ -108,24 +112,31 @@
             android:layout_margin="10dp"
             android:background="@drawable/default_answer_border_bg"
             android:gravity="center"
-            android:padding="15dp"
+            android:padding="10dp"
             android:textColor="@color/stoic_answer_text"
             android:textSize="18sp"
             tools:text="stoic" />
 
-        <Button
-            android:id="@+id/btn_next"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="35dp"
-            android:layout_marginRight="35dp"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/button_border_bg"
-            android:padding="16dp"
-            android:text="@string/next_button"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:background="@drawable/button_border_bg"
+                android:padding="10dp"
+                android:text="@string/next_button"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
     </LinearLayout>
-</ScrollView>
+</LinearLayout>

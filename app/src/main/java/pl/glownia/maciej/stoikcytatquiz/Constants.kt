@@ -1,6 +1,5 @@
 package pl.glownia.maciej.stoikcytatquiz
 
-import android.os.Build
 // object is a special class that only has one instance. If you create a class with the object
 // keyword instead of class, the Kotlin compiler makes the constructor private, creates a static
 // reference for the object, and initializes the reference in a static block.
