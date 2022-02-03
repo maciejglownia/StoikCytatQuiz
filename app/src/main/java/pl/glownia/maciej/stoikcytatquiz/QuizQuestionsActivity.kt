@@ -293,6 +293,7 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
         customDialog.findViewById<TextView>(R.id.tv_submit).setOnClickListener {
             customDialog.dismiss() // Dialog will be dismissed
             val intent = Intent(this@QuizQuestionsActivity, MenuActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
             startActivity(intent)
         }
         customDialog.findViewById<TextView>(R.id.tv_cancel).setOnClickListener {

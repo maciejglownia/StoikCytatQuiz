@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.Dispatchers
@@ -135,8 +136,29 @@ class MenuActivity : AppCompatActivity() {
         }
     }
 
+    // Override onBackPressed() method. Call customDialogFunction()
     override fun onBackPressed() {
-        val intent = Intent(this@MenuActivity, MainActivity::class.java)
-        startActivity(intent)
+        customDialogForBackButton()
+    }
+
+    // Set up custom dialog when user click back button during taking the quiz
+    private fun customDialogForBackButton() {
+        val customDialog = Dialog(this)
+        // Set the screen content from a layout resource.
+        // The resource will be inflated, adding all top-level views to the screen
+        customDialog.setContentView(R.layout.dialog_custom_back_button_for_exit)
+        customDialog.findViewById<TextView>(R.id.tv_submit).setOnClickListener {
+            customDialog.dismiss() // Dialog will be dismissed
+            val intent = Intent(Intent.ACTION_MAIN)
+            intent.addCategory(Intent.CATEGORY_HOME)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+            startActivity(intent)
+            finish()
+        }
+        customDialog.findViewById<TextView>(R.id.tv_cancel).setOnClickListener {
+            customDialog.dismiss()
+        }
+        //Start the dialog and display it on screen.
+        customDialog.show()
     }
 }
