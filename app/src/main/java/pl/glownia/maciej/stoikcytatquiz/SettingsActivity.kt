@@ -64,11 +64,11 @@ class SettingsActivity : AppCompatActivity() {
         val builder = AlertDialog.Builder(this)
         builder.setTitle("O aplikacji")
         builder.setMessage(
-            "Aplikacja została stworzona z myślą o wszystkich, którzy chcą " +
+            "Aplikacja została stworzona z myślą o wszystkich, którzy chcą poznać lub " +
                     "utrwalić mądrości czterech znanych stoików: Epikteta z Hierapolis, " +
                     "Marka Aureliusza, Seneki Młodszego, Zenona z Kition." +
                     "\n\nAplikacja została zaprojektowana w formie quizu składającego się " +
-                    "z 1, 10 lub 40 pytań. Użytkownik decuduje na ile pytań chce odpowiedzieć. " +
+                    "z 1, 10 lub 40 pytań. Użytkownik decyduje na ile pytań chce odpowiedzieć. " +
                     "W bazie jest łącznie 100 cytatów. W zależności od osiągniętego wyniku użytkownik " +
                     "otrzymuje na koniec trofeum w postaci wieńca laurowego. " +
                     "\nKolory wieńca (kolejno od największej ilości punktów, procent poprawnych odpowiedzi):" +
