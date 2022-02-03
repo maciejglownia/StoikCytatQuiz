@@ -68,6 +68,9 @@ Of course there is space to develop this app for different features.
    - null safety,
    - generate privacy policy,
 5. Publish application on Play Store
+6. I should test application more carefully before publish it. Also ask other developers for help 
+   to test it. Then there is a chance that someone will take a fresh look at the application 
+   and it helps avoid bugs.
    
 ### Summary ###
 There are many concepts, more of them I saw first time. They need to be repeat to understand them 
