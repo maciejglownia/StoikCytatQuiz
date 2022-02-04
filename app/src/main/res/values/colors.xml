@@ -20,4 +20,6 @@
     <color name="silver">#C0C0C0</color>
     <color name="bronze">#CC6633</color>
     <color name="olive">#808000</color>
+    <color name="stoic_dark_mode_bg">#141516</color>
+
 </resources>

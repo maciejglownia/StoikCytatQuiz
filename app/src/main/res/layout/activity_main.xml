@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/main_background"
+    android:background="?android:background"
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".MainActivity">
@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:background="@color/stoic_light_bg"
+        android:background="@color/white"
         android:elevation="5dp"
         app:cardCornerRadius="8dp">
 
@@ -22,38 +22,42 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
+            android:background="@color/white"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:background="@color/white"
                 android:gravity="center"
                 android:text="@string/hello_message"
-                android:textColor="@color/stoic_text"
+                android:textColor="?android:textColorPrimary"
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/white"
                 android:gravity="center"
                 android:text="@string/welcome_message"
-                android:textColor="@color/stoic_text"
+                android:textColor="?android:textColorPrimary"
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
                 android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="30dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white"
                 android:gravity="center"
                 android:padding="16dp"
                 android:text="@string/start_text_to_user"
-                android:textColor="@color/stoic_answer_text"
+                android:textColor="?android:textColorPrimary"
                 android:textSize="20sp" />
 
             <Button
@@ -69,6 +73,7 @@
                 android:textColor="@color/white"
                 android:textSize="18sp" />
         </LinearLayout>
+
 
     </com.google.android.material.card.MaterialCardView>
 

@@ -2,19 +2,18 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/stoic_light_bg"
-    android:orientation="vertical"
-    android:padding="10dp">
+    android:background="?android:background"
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:gravity="center"
-        android:layout_gravity="center"
         android:padding="10dp"
         android:text="@string/Are_you_sure_you_want_exit_the_app"
-        android:textColor="@color/stoic_text"
+        android:textColor="?android:textColorPrimary"
         android:textSize="20sp" />
 
     <LinearLayout

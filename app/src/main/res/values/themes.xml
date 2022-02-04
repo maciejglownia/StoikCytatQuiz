@@ -12,7 +12,12 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="android:textColorPrimary">@color/stoic_answer_text</item>
+        <item name="android:background">@color/main_background</item>
+        <item name="android:tint">@color/stoic_answer_text</item>
+
     </style>
+
     <style name="ProgressBarStyle">
         <item name="colorAccent">@color/teal_200</item>
     </style>
