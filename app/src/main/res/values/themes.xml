@@ -14,8 +14,6 @@
         <!-- Customize your theme here. -->
         <item name="android:textColorPrimary">@color/stoic_answer_text</item>
         <item name="android:background">@color/main_background</item>
-        <item name="android:tint">@color/stoic_answer_text</item>
-
     </style>
 
     <style name="ProgressBarStyle">
