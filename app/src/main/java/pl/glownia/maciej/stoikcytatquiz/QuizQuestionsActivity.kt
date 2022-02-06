@@ -221,7 +221,7 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
                         btnNext!!.text.equals("POTWIERDŹ")  // "CONFIRM"
                     ) {
                         Toast.makeText(
-                            this,
+                            applicationContext,
                             "Zaznacz odpowiedź!", Toast.LENGTH_SHORT    // "Mark the answer"
                         ).show()
                     } else {

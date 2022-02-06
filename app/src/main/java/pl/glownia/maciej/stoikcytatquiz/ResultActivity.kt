@@ -94,6 +94,7 @@ class ResultActivity : AppCompatActivity() {
         if (result < 0 || result > 100) {
             return "Coś poszło nie tak. Błąd aplikacji." // "Something went wrong. App doesn't work properly."
         } else if (result == 100) {
+            with(laurelWreath) { setColorFilter(ContextCompat.getColor(context, R.color.teal_200)) }
             return "Bezbłędnie! Wspaniały wynik!" // "Faultlessly! Great result!"
         } else if (result in 80..99) {
             with(laurelWreath) { setColorFilter(ContextCompat.getColor(context, R.color.silver)) }
@@ -106,7 +107,7 @@ class ResultActivity : AppCompatActivity() {
             return "Widać braki, ale nie łam się. Czyń postępy!" // Yours gap in knowledge are
             // visible, but don't worry. Do the progress.
         } else {
-            with(laurelWreath) { setColorFilter(ContextCompat.getColor(context, R.color.black)) }
+            with(laurelWreath) { setColorFilter(ContextCompat.getColor(context, R.color.light_black)) }
             return "Nie przejmuj się, ale poświęć więcej czasu na czytanie."
             // "Don't worry, but spend more time reading."
         }

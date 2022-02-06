@@ -18,7 +18,8 @@
         android:layout_marginEnd="1dp"
         android:background="@color/transparent"
         android:contentDescription="@string/settings_dots"
-        android:src="@drawable/settings_dots" />
+        android:src="@drawable/settings_dots"
+        app:tint="?android:tint" />
 
     <TextView
         android:id="@+id/tv_result"
