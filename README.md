@@ -9,7 +9,7 @@ Application is in polish language.
 This app contains thoughts of 4 stoics: Epictetus from Hierapolis, Marcus Aurelius, 
 Seneca the Younger and Zeno of Citium.
 
-#####Overview:#####
+##### Overview: #####
 1. First activity is to welcome user, 
 2. Second activity is to let user choose if they want to draw 1, 10 or 40 quotes.
    This layout also contains 3 dots button to settings area,
