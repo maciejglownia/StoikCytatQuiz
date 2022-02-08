@@ -1,4 +1,7 @@
 # Stoik Cytat Quiz #
+
+You can download this app on your Android Device:
+!!! [Google Play Store](https://play.google.com/store/apps/details?id=pl.glownia.maciej.stoikcytatquiz&hl=pl)!!!
 ---
 ### Goal ### 
 Create an app which let user test their knowledge about popular thoughts of stoics.
@@ -8,7 +11,8 @@ Seneca the Younger and Zeno of Citium.
 
 #####Overview:#####
 1. First activity is to welcome user, 
-2. Second activity is to let user choose if they want to draw 1, 10 or 40 quotes,
+2. Second activity is to let user choose if they want to draw 1, 10 or 40 quotes.
+   This layout also contains 3 dots button to settings area,
 3. Then in next activity user can find question/s based on thoughts and four possible answer 
    to check. Good and bad answer is highlight in different color. If user chosen wrong answer 
    there also good answer will be displayed,
@@ -20,7 +24,7 @@ Seneca the Younger and Zeno of Citium.
    of they answers (counted) related to total number of questions.
 8. Last option for user is to finish quiz.
 9. Quotes I keep in HashMap.
-10. There is also settings activity when user can:
+10. There is also settings activity when user can (after click 3 dots in second activity):
    a) send mail to developer,
    b) read privacy policy,
    c) rate app in the google store,
