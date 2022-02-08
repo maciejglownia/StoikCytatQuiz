@@ -1,7 +1,7 @@
 # Stoik Cytat Quiz #
 
 You can download this app on your Android Device:
-!!! [Google Play Store](https://play.google.com/store/apps/details?id=pl.glownia.maciej.stoikcytatquiz&hl=pl)!!!
+[Google Play Store](https://play.google.com/store/apps/details?id=pl.glownia.maciej.stoikcytatquiz&hl=pl)
 ---
 ### Goal ### 
 Create an app which let user test their knowledge about popular thoughts of stoics.
