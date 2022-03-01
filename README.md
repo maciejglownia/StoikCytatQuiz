@@ -9,6 +9,15 @@ Application is in polish language.
 This app contains thoughts of 4 stoics: Epictetus from Hierapolis, Marcus Aurelius, 
 Seneca the Younger and Zeno of Citium.
 
+### Screenshots ###
+![Welcome](app/src/main/res/screenshots/1_welcome.jpg)
+![Menu](app/src/main/res/screenshots/2_menu.jpg)
+![Correct answer](app/src/main/res/screenshots/3_correctAnswer.jpg)
+![Wrong answer](app/src/main/res/screenshots/4_wrongAnswer.jpg)
+![Result](app/src/main/res/screenshots/5_result.jpg)
+![Settings](app/src/main/res/screenshots/6_settings.jpg)
+![Protection before quit](app/src/main/res/screenshots/7_protection.jpg)
+
 ##### Overview: #####
 1. First activity is to welcome user, 
 2. Second activity is to let user choose if they want to draw 1, 10 or 40 quotes.
@@ -79,7 +88,8 @@ Of course there is space to develop this app for different features.
 ### Links (to say "Thank you!" for others job): ###
 
 - [Denis Panjuta](https://tutorials.eu/)
-- [Privacy Policy Generator](https://app-privacy-policy-generator.firebaseapp.com/)
+- [Flaticon - free icons](https://www.flaticon.com/free-icons/android) [Image sources](https://github.com/maciejglownia/StoikCytatQuiz/blob/master/app/src/main/assets/sources.txt)
+- [Privacy policy generator](https://app-privacy-policy-generator.firebaseapp.com/)
 - [Norio - graphic generator](https://www.norio.be/graphic-generator/)
 
 ### Dear Visitor ###
