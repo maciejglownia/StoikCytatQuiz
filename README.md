@@ -91,6 +91,7 @@ Of course there is space to develop this app for different features.
 - [Flaticon - free icons](https://www.flaticon.com/free-icons/android) [Image sources](https://github.com/maciejglownia/StoikCytatQuiz/blob/master/app/src/main/assets/sources.txt)
 - [Privacy policy generator](https://app-privacy-policy-generator.firebaseapp.com/)
 - [Norio - graphic generator](https://www.norio.be/graphic-generator/)
+- [Lepiej Teraz - podcast Radosława Budnickiego](https://lepiejteraz.pl/)
 
 ### Dear Visitor ###
 

@@ -30,4 +30,6 @@
     <string name="settings_in_settings">Ustawienia</string>
     <string name="app_description">O aplikacji</string>
     <string name="Are_you_sure_you_want_exit_the_app">Czy na pewno chcesz wyjść z aplikacji?</string>
+    <string name="lepiej_teraz_icon">lepiej_teraz_icon</string>
+    <string name="lepiej_teraz_text">Lepiej Teraz - Stoicki podcast</string>
 </resources>

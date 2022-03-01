@@ -58,6 +58,17 @@ class SettingsActivity : AppCompatActivity() {
         aboutButton.setOnClickListener {
             showDescriptionDialog()
         }
+
+        // Set up button to open lepiejteraz.pl - website of Radosław Budnicki about stoic life
+        val lepiejTerazButton: LinearLayout = findViewById(R.id.ll_lepiej_teraz)
+        lepiejTerazButton.setOnClickListener {
+            val browserIntent = Intent(
+                Intent.ACTION_VIEW, Uri.parse(
+                    "https://lepiejteraz.pl/"
+                )
+            )
+            startActivity(browserIntent)
+        }
     }
 
     private fun showDescriptionDialog() {

@@ -32,6 +32,7 @@
             android:id="@+id/iv_contact"
             android:layout_width="30dp"
             android:layout_height="30dp"
+            android:gravity="center_vertical"
             android:layout_marginStart="10dp"
             android:layout_weight="1"
             android:contentDescription="@string/contact_icon"
@@ -44,6 +45,7 @@
             android:layout_weight="6"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
+            android:gravity="center_vertical"
             android:text="@string/contact_field"
             android:textColor="?android:textColorPrimary"
             android:textSize="18sp" />
@@ -73,6 +75,7 @@
             android:layout_height="match_parent"
             android:layout_weight="6"
             android:paddingStart="10dp"
+            android:gravity="center_vertical"
             android:paddingEnd="10dp"
             android:text="@string/privacy_policy_field"
             android:textColor="?android:textColorPrimary"
@@ -102,6 +105,7 @@
             android:layout_height="match_parent"
             android:layout_weight="6"
             android:paddingStart="10dp"
+            android:gravity="center_vertical"
             android:paddingEnd="10dp"
             android:text="@string/rate_field"
             android:textColor="?android:textColorPrimary"
@@ -132,7 +136,38 @@
             android:layout_weight="6"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
+            android:gravity="center_vertical"
             android:text="@string/info_about"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_lepiej_teraz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/iv_lepiej_teraz"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/lepiej_teraz_icon"
+            android:src="@drawable/laurel_wreath_to_lepiej_teraz" />
+
+        <TextView
+            android:id="@+id/tv_lepiej_teraz"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="@string/lepiej_teraz_text"
             android:textColor="?android:textColorPrimary"
             android:textSize="18sp" />
     </LinearLayout>
