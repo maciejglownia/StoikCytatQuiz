@@ -44,7 +44,7 @@ Of course there is space to develop this app for different features.
 ### Requirements: ###
 1. Android Studio ArcticFox (2020.3.1) Stable,
 2. Minimal Sdk: 21 Recommended: 32.
-3. Size of device - minimum 5.00"
+3. Size of device - recommended minimum 5.00"
 
 ### What I have learned during this project? ###
 1. I should write README.md up to date -> now it is difficult to put everything in nice order
@@ -76,6 +76,17 @@ Of course there is space to develop this app for different features.
    to test it. Then there is a chance that someone will take a fresh look at the application 
    and it helps avoid bugs.
    
+### Links (to say "Thank you!" for others job): ###
+
+- [Denis Panjuta](https://tutorials.eu/)
+- [Privacy Policy Generator](https://app-privacy-policy-generator.firebaseapp.com/)
+- [Norio - graphic generator](https://www.norio.be/graphic-generator/)
+
+### Dear Visitor ###
+
+If you see an opportunity to improve my code do not hesitate to contact me: maciej.k.glownia@gmail.com. 
+If you want to copy it and develop with your own idea, take it and enjoy learning path.
+
 ### Summary ###
 There are many concepts, more of them I saw first time. They need to be repeat to understand them 
 better, but I used many lines of comments to write down explanation to understand, as good as 
