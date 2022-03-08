@@ -172,6 +172,36 @@
             android:textSize="18sp" />
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/ll_wygraj_dzien"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/iv_wygraj_dzien"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/wygraj_dzien_icon"
+            android:src="@drawable/peak_link_to_other_app" />
+
+        <TextView
+            android:id="@+id/tv_wygraj_dzien"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="@string/moja_aplikacja_wygraj_dzie"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="18sp" />
+    </LinearLayout>
+
     <TextView
         android:id="@+id/tv_version"
         android:layout_width="match_parent"
