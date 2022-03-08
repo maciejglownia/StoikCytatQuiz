@@ -34,11 +34,13 @@ Seneca the Younger and Zeno of Citium.
 8. Last option for user is to finish quiz.
 9. Quotes I keep in HashMap.
 10. There is also settings activity when user can (after click 3 dots in second activity):
-   a) send mail to developer,
-   b) read privacy policy,
-   c) rate app in the google store,
-   d) read description about application,
-   e) check the version of app - available at the bottom of layout.
+    a) send mail to developer,
+    b) read privacy policy,
+    c) rate app in the google store,
+    d) read description about application,
+    e) check the version of app - available at the bottom of layout
+    f) visit website with content about stoicism
+    g) visit Google Play Store to get my other application "Wygraj Dzień".
 
 Of course there is space to develop this app for different features.
 
@@ -92,6 +94,7 @@ Of course there is space to develop this app for different features.
 - [Privacy policy generator](https://app-privacy-policy-generator.firebaseapp.com/)
 - [Norio - graphic generator](https://www.norio.be/graphic-generator/)
 - [Lepiej Teraz - podcast Radosława Budnickiego](https://lepiejteraz.pl/)
+- [Ryan Holiday](https://ryanholiday.net/)
 
 ### Dear Visitor ###
 

@@ -110,9 +110,9 @@ class SettingsActivity : AppCompatActivity() {
         builder.setTitle("Drogi Gościu!") // Dear Guest!
         // Description to inform user that they can go to the website or stay in the application
         builder.setMessage(
-            "Jeśli szukasz więcej mądrości i pragniesz sięgnąć głębiej do stoicyzmu, " +
+            "Jeśli chcesz zgłębić filozofię stoicką, " +
                     "koniecznie poznaj Radka Budnickiego i jego podcast ''Lepiej Teraz'' klikając " +
-                    "''ZABIERZ MNIE'' poniżej. \nTam otrzymasz mnówstwo informacji na ten temat. " +
+                    "''ZABIERZ MNIE'' poniżej. \nTam otrzymasz mnówstwo wartościowych treści na ten temat. " +
                     "Jestem pewien, że nie będzie to wizyta na chwilę. " +
                     "\nJeśli natomiast chcesz pozostać w aplikacji wybierz ''ZOSTAJĘ''." +
                     "\n\n\nWybierając ''ZABIERZ MNIE'' jednocześnie wyrażasz zgodę na przeniesienie Cię do " +
@@ -143,11 +143,11 @@ class SettingsActivity : AppCompatActivity() {
         builder.setTitle("Drogi Gościu!") // Dear Guest!
         // Description about if user wants to go to the Google Play Store for the app or staying here
         builder.setMessage(
-            "Jeżeli oprócz mądrości i spokoju ducha, poszukujesz także sposobu na skuteczniejsze " +
-                    "osiąganie zamierzonych celów, postanowień oraz realizacji swoich planów, " +
-                    "pozwól mi zaprosić Cię do skorzystania z mojej aplikacji ''Wygraj Dzień''." +
-                    "\nAplikacja umożliwi Ci wypisywanie zadań, czynności, które należy wykonać, " +
-                    "abyś mógł czynić postępy w obszarach zdrowego ciała, ducha i finansów. " +
+            "Jeżeli oprócz mądrości i spokoju ducha, poszukujesz także sposobu na skuteczne " +
+                    "osiąganie zamierzonych celów, zapraszam Cię do skorzystania z mojej aplikacji " +
+                    "''Wygraj Dzień''." +
+                    "\nAplikacja umożliwa tworzenie zadań, które pozwolą Ci czynić postępy " +
+                    "w obszarach zdrowego ciała, ducha i finansów. " +
                     "Wybierz ''ZABIERZ MNIE'' by przejść do aplikacji ''Wygraj Dzień'' lub " +
                     "''ZOSTAJĘ'', aby pozostać w obecnej." +
                     "\n\n\nWybierając ''ZABIERZ MNIE'' jednocześnie wyrażasz zgodę na przeniesienie Cię do " +
