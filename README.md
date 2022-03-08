@@ -10,13 +10,13 @@ This app contains thoughts of 4 stoics: Epictetus from Hierapolis, Marcus Aureli
 Seneca the Younger and Zeno of Citium.
 
 ### Screenshots ###
-![Welcome](app/src/main/res/screenshots/1_welcome.jpg)
-![Menu](app/src/main/res/screenshots/2_menu.jpg)
-![Correct answer](app/src/main/res/screenshots/3_correctAnswer.jpg)
-![Wrong answer](app/src/main/res/screenshots/4_wrongAnswer.jpg)
-![Result](app/src/main/res/screenshots/5_result.jpg)
-![Settings](app/src/main/res/screenshots/6_settings.jpg)
-![Protection before quit](app/src/main/res/screenshots/7_protection.jpg)
+![Welcome](app/src/main/res/drawable/welcome_sshot.png)
+![Menu](app/src/main/res/drawable/menu_sshot.png)
+![Correct answer](app/src/main/res/drawable/correct_answer_sshot.png)
+![Wrong answer](app/src/main/res/drawable/wrong_answer_sshot.png)
+![Result](app/src/main/res/drawable/result_sshot.png)
+![Settings](app/src/main/res/drawable/settings_sshot.png)
+![Protection before quit](app/src/main/res/drawable/protection_sshot.png)
 
 ##### Overview: #####
 1. First activity is to welcome user, 
