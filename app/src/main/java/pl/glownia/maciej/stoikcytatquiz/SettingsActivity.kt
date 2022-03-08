@@ -59,10 +59,16 @@ class SettingsActivity : AppCompatActivity() {
             showDescriptionDialog()
         }
 
-        // Set up button to open lepiejteraz.pl - website of Radosław Budnicki about stoic life
+        // Set up button to open lepiejteraz.pl - website of Radosław Budnicki - about stoic life
         val lepiejTerazButton: LinearLayout = findViewById(R.id.ll_lepiej_teraz)
         lepiejTerazButton.setOnClickListener {
-showDialogToAskUserIfWantsToGoToPolishPodcastAboutStoicism()
+            showDialogToAskUserIfWantsToGoToPolishPodcastAboutStoicism()
+        }
+
+        // Set up button to open Google Play Store - place to get my other application Wygraj Dzień
+        val wygrajDzienApp: LinearLayout = findViewById(R.id.ll_wygraj_dzien)
+        wygrajDzienApp.setOnClickListener {
+            showDialogToAskUserIfWantsToGoToGooglePlayStoreForToCheckWygrajDzienApplication()
         }
     }
 
@@ -110,7 +116,7 @@ showDialogToAskUserIfWantsToGoToPolishPodcastAboutStoicism()
                     "Jestem pewien, że nie będzie to wizyta na chwilę. " +
                     "\nJeśli natomiast chcesz pozostać w aplikacji wybierz ''ZOSTAJĘ''." +
                     "\n\n\nWybierając ''ZABIERZ MNIE'' jednocześnie wyrażasz zgodę na przeniesienie Cię do " +
-                    " strony internetowej podcastu ''Lepiej Teraz''."
+                    "strony internetowej podcastu ''Lepiej Teraz''."
         )
         builder.setPositiveButton("ZABIERZ MNIE") // Take me (to the website)
         { dialogInterface, _ ->
@@ -119,6 +125,40 @@ showDialogToAskUserIfWantsToGoToPolishPodcastAboutStoicism()
                 Intent.ACTION_VIEW, Uri.parse(
                     "https://lepiejteraz.pl/"
                 )
+            )
+            startActivity(browserIntent)
+        }
+        builder.setNegativeButton("ZOSTAJĘ") // I'm staying (in the application)
+        { dialogInterface, _ ->
+            dialogInterface.dismiss() // Dialog will be dismissed
+        }
+        val appDescription: AlertDialog = builder.create()
+        appDescription.setCancelable(false) // Will not allow user to cancel after clicking on remaining screen area
+        appDescription.show()  // show the dialog to UI
+    }
+
+    // Need this method to let user decide to go to Google Play Store or stay in the application
+    private fun showDialogToAskUserIfWantsToGoToGooglePlayStoreForToCheckWygrajDzienApplication() {
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Drogi Gościu!") // Dear Guest!
+        // Description about if user wants to go to the Google Play Store for the app or staying here
+        builder.setMessage(
+            "Jeżeli oprócz mądrości i spokoju ducha, poszukujesz także sposobu na skuteczniejsze " +
+                    "osiąganie zamierzonych celów, postanowień oraz realizacji swoich planów, " +
+                    "pozwól mi zaprosić Cię do skorzystania z mojej aplikacji ''Wygraj Dzień''." +
+                    "\nAplikacja umożliwi Ci wypisywanie zadań, czynności, które należy wykonać, " +
+                    "abyś mógł czynić postępy w obszarach zdrowego ciała, ducha i finansów. " +
+                    "Wybierz ''ZABIERZ MNIE'' by przejść do aplikacji ''Wygraj Dzień'' lub " +
+                    "''ZOSTAJĘ'', aby pozostać w obecnej." +
+                    "\n\n\nWybierając ''ZABIERZ MNIE'' jednocześnie wyrażasz zgodę na przeniesienie Cię do " +
+                    "Google Play Store, gdzie możesz pobrać aplikację ''Wygraj Dzień''."
+        )
+        builder.setPositiveButton("ZABIERZ MNIE") // Take me (to the Google Play Store)
+        { dialogInterface, _ ->
+            dialogInterface.dismiss()
+            val browserIntent = Intent(
+                Intent.ACTION_VIEW,
+                Uri.parse("https://play.google.com/store/apps/details?id=pl.glownia.maciej.wygrajdzien")
             )
             startActivity(browserIntent)
         }
