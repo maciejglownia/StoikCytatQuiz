@@ -62,12 +62,7 @@ class SettingsActivity : AppCompatActivity() {
         // Set up button to open lepiejteraz.pl - website of Radosław Budnicki about stoic life
         val lepiejTerazButton: LinearLayout = findViewById(R.id.ll_lepiej_teraz)
         lepiejTerazButton.setOnClickListener {
-            val browserIntent = Intent(
-                Intent.ACTION_VIEW, Uri.parse(
-                    "https://lepiejteraz.pl/"
-                )
-            )
-            startActivity(browserIntent)
+showDialogToAskUserIfWantsToGoToPolishPodcastAboutStoicism()
         }
     }
 
@@ -97,6 +92,40 @@ class SettingsActivity : AppCompatActivity() {
             dialogInterface.dismiss() // Dialog will be dismissed
         }
 
+        val appDescription: AlertDialog = builder.create()
+        appDescription.setCancelable(false) // Will not allow user to cancel after clicking on remaining screen area
+        appDescription.show()  // show the dialog to UI
+    }
+
+
+    // Need this method to let user decide to go to the website or stay in the application
+    private fun showDialogToAskUserIfWantsToGoToPolishPodcastAboutStoicism() {
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Drogi Gościu!") // Dear Guest!
+        // Description to inform user that they can go to the website or stay in the application
+        builder.setMessage(
+            "Jeśli szukasz więcej mądrości i pragniesz sięgnąć głębiej do stoicyzmu, " +
+                    "koniecznie poznaj Radka Budnickiego i jego podcast ''Lepiej Teraz'' klikając " +
+                    "''ZABIERZ MNIE'' poniżej. \nTam otrzymasz mnówstwo informacji na ten temat. " +
+                    "Jestem pewien, że nie będzie to wizyta na chwilę. " +
+                    "\nJeśli natomiast chcesz pozostać w aplikacji wybierz ''ZOSTAJĘ''." +
+                    "\n\n\nWybierając ''ZABIERZ MNIE'' jednocześnie wyrażasz zgodę na przeniesienie Cię do " +
+                    " strony internetowej podcastu ''Lepiej Teraz''."
+        )
+        builder.setPositiveButton("ZABIERZ MNIE") // Take me (to the website)
+        { dialogInterface, _ ->
+            dialogInterface.dismiss()
+            val browserIntent = Intent(
+                Intent.ACTION_VIEW, Uri.parse(
+                    "https://lepiejteraz.pl/"
+                )
+            )
+            startActivity(browserIntent)
+        }
+        builder.setNegativeButton("ZOSTAJĘ") // I'm staying (in the application)
+        { dialogInterface, _ ->
+            dialogInterface.dismiss() // Dialog will be dismissed
+        }
         val appDescription: AlertDialog = builder.create()
         appDescription.setCancelable(false) // Will not allow user to cancel after clicking on remaining screen area
         appDescription.show()  // show the dialog to UI
