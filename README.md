@@ -15,7 +15,7 @@ Seneca the Younger and Zeno of Citium.
 ![Correct answer](app/src/main/res/drawable/correct_answer_sshot.png)
 ![Wrong answer](app/src/main/res/drawable/wrong_answer_sshot.png)
 ![Result](app/src/main/res/drawable/result_sshot.png)
-![Settings](app/src/main/res/drawable/settings_sshot.png)
+![Settings](app/src/main/res/drawable/settings_sshot.jpg)
 ![Protection before quit](app/src/main/res/drawable/protection_sshot.png)
 
 ##### Overview: #####
