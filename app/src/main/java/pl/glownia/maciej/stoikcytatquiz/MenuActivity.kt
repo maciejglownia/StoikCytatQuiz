@@ -1,5 +1,6 @@
 package pl.glownia.maciej.stoikcytatquiz
 
+import android.annotation.SuppressLint
 import android.app.Dialog
 import android.content.Intent
 import android.graphics.Color
@@ -137,6 +138,7 @@ class MenuActivity : AppCompatActivity() {
     }
 
     // Override onBackPressed() method. Call customDialogFunction()
+    @SuppressLint("MissingSuperCall")
     override fun onBackPressed() {
         customDialogForBackButton()
     }

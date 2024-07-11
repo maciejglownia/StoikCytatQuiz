@@ -1,5 +1,6 @@
 package pl.glownia.maciej.stoikcytatquiz
 
+import android.annotation.SuppressLint
 import android.app.Dialog
 import android.content.Intent
 import android.graphics.Color
@@ -162,18 +163,21 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
                     drawableView
                 )
             }
+
             2 -> {
                 tvAnswerTwo?.background = ContextCompat.getDrawable(
                     this@QuizQuestionsActivity,
                     drawableView
                 )
             }
+
             3 -> {
                 tvAnswerThree?.background = ContextCompat.getDrawable(
                     this@QuizQuestionsActivity,
                     drawableView
                 )
             }
+
             4 -> {
                 tvAnswerFour?.background = ContextCompat.getDrawable(
                     this@QuizQuestionsActivity,
@@ -195,16 +199,19 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
                     selectedAnswerView(it, 1) // it is the TV answer one text view
                 }
             }
+
             R.id.tv_answer_two -> {
                 tvAnswerTwo?.let {
                     selectedAnswerView(it, 2)
                 }
             }
+
             R.id.tv_answer_three -> {
                 tvAnswerThree?.let {
                     selectedAnswerView(it, 3)
                 }
             }
+
             R.id.tv_answer_four -> {
                 tvAnswerFour?.let {
                     selectedAnswerView(it, 4)
@@ -217,9 +224,7 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btn_next -> {
                 if (mSelectedAnswerPosition == 0) {
                     // Make sure that one of answers is clicked
-                    if (mSelectedAnswerPosition == 0 &&
-                        btnNext!!.text.equals("POTWIERDŹ")  // "CONFIRM"
-                    ) {
+                    if (btnNext!!.text.equals("POTWIERDŹ")) { // CONFIRM
                         Toast.makeText(
                             applicationContext,
                             "Zaznacz odpowiedź!", Toast.LENGTH_SHORT    // "Mark the answer"
@@ -233,6 +238,7 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
                         mCurrentPosition <= mQuestionsList!!.size -> {
                             setQuestion()
                         }
+
                         else -> {
                             val intent = Intent(
                                 this@QuizQuestionsActivity,
@@ -256,10 +262,7 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
                         answerView(mSelectedAnswerPosition, R.drawable.wrong_answer_border_bg)
                     } else {
                         // Protect to count correct answer only when clicked on correct answer once
-                        val clicked = 0
-                        if (clicked == 0) {
-                            mCorrectAnswers++ // increment if answer is correct
-                        }
+                        mCorrectAnswers++ // increment if answer is correct
                     }
                     // Need to set correct answer on color for correct answer if users answer
                     // was either good or bad
@@ -280,6 +283,7 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     // Override onBackPressed() method. Call customDialogFunction()
+    @SuppressLint("MissingSuperCall")
     override fun onBackPressed() {
         customDialogForBackButton()
     }

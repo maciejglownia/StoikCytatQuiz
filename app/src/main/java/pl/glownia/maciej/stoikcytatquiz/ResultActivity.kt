@@ -107,7 +107,14 @@ class ResultActivity : AppCompatActivity() {
             return "Widać braki, ale nie łam się. Czyń postępy!" // Yours gap in knowledge are
             // visible, but don't worry. Do the progress.
         } else {
-            with(laurelWreath) { setColorFilter(ContextCompat.getColor(context, R.color.light_black)) }
+            with(laurelWreath) {
+                setColorFilter(
+                    ContextCompat.getColor(
+                        context,
+                        R.color.light_black
+                    )
+                )
+            }
             return "Nie przejmuj się, ale poświęć więcej czasu na czytanie."
             // "Don't worry, but spend more time reading."
         }

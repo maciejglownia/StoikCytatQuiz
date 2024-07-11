@@ -1,15 +1,19 @@
 # Stoik Cytat Quiz #
 
 You can download this app on your Android Device:
-[Google Play Store](https://play.google.com/store/apps/details?id=pl.glownia.maciej.stoikcytatquiz&hl=pl)
+// todo add the link when the app is deployed
+[Google Play Store]()
 ---
+
 ### Goal ### 
-Create an app which let user test their knowledge about popular thoughts of stoics.
-Application is in polish language.
-This app contains thoughts of 4 stoics: Epictetus from Hierapolis, Marcus Aurelius, 
+
+Create an app that lets users test their knowledge about popular thoughts of stoics.
+The application is in Polish language.
+This app contains thoughts of 4 stoics: Epictetus from Hierapolis, Marcus Aurelius,
 Seneca the Younger and Zeno of Citium.
 
 ### Screenshots ###
+
 ![Welcome](app/src/main/res/drawable/welcome_sshot.jpg)
 ![Menu](app/src/main/res/drawable/menu_sshot.jpg)
 ![Correct answer](app/src/main/res/drawable/correct_answer_sshot.jpg)
@@ -19,74 +23,83 @@ Seneca the Younger and Zeno of Citium.
 ![Protection before quit](app/src/main/res/drawable/protection_sshot.jpg)
 
 ##### Overview: #####
-1. First activity is to welcome user, 
-2. Second activity is to let user choose if they want to draw 1, 10 or 40 quotes.
-   This layout also contains 3 dots button to settings area,
-3. Then in next activity user can find question/s based on thoughts and four possible answer 
-   to check. Good and bad answer is highlight in different color. If user chosen wrong answer 
+
+1. The first activity is to welcome the user,
+2. The second activity lets users draw 1, 10, or 40 quotes,
+   This layout also contains 3 dots button to the settings area,
+3. In the next activity, the user can find question/s based on thoughts and four possible answers
+   to check. Good and bad answer is highlighted in a different color. If the user chosen the wrong
+   answer
    there also good answer will be displayed,
-4. This layout also contain progress bar to show user which question actually is 
-   and how many is in total,
-5. Application requires to check one of answer to go to the next question,
-6. If user press back button there is dialog to protect before accidentally finish the quiz,   
-7. At the end there is result activity were trophy is waiting for user. Also there is result 
-   of they answers (counted) related to total number of questions.
-8. Last option for user is to finish quiz.
-9. Quotes I keep in HashMap.
-10. There is also settings activity when user can (after click 3 dots in second activity):
-    a) send mail to developer,
-    b) read privacy policy,
-    c) rate app in the google store,
-    d) read description about application,
-    e) check the version of app - available at the bottom of layout
-    f) visit website with content about stoicism
+4. This layout also contains a progress bar to show the user which question is
+   and how many are in total,
+5. The application requires to check one of the answers to go to the next question,
+6. If the user presses the back button there is a dialog to protect before accidentally finishing
+   the quiz,
+7. At the end there is a result activity where the trophy is waiting for the user. Also, there is
+   the result
+   of the answers (counted) related to the total number of questions,
+8. The last option for the user is to finish the quiz,
+9. Quotes I keep in HashMap,
+10. There is also a settings activity when the user can (after clicking 3 dots in the second
+    activity):
+    a) send mail to the developer,
+    b) read the privacy policy,
+    c) rate the app in the Google Play Store,
+    d) read the description about the application,
+    e) check the version of the app - available at the bottom of the layout,
+    f) visit website with content about stoicism,
     g) visit Google Play Store to get my other application "Wygraj Dzień".
 
-Of course there is space to develop this app for different features.
+There is a space to develop this app for different features.
 
 ### To start this app ###
+
 1. Clone this project,
 2. Open Android Studio,
 3. Select File -> Open... -> choose this project from path where you cloned it,
 4. Set Gradle: File -> Settings -> Build, Execution, Deployment -> Gradle
-   -> Gradle JDK: set up for 1.8 (if it is necessary),
+   -> Gradle JDK: set up for 17 (if it is necessary),
 5. Run the application.
 
 ### Requirements: ###
-1. Android Studio ArcticFox (2020.3.1) Stable,
-2. Minimal Sdk: 21 Recommended: 32.
+
+1. Android Studio Koala 2024.1.1,
+2. Minimal Sdk: 34 Recommended: 34.
 3. Size of device - recommended minimum 5.00"
 
 ### What I have learned during this project? ###
+
 1. I should write README.md up to date -> now it is difficult to put everything in nice order
-   with more details and also with thoughts which I had in various points during develop this app,
+   with more details and also with thoughts that I had at various points while developing this app,
 2. How to set up:
-   - program buttons to work in different goal,
-   - layouts,
-   - back button,
-   - gradle,
-   - intent to send mail to developer,
+    - program buttons to work on different goals,
+    - layouts,
+    - back button,
+    - gradle,
+    - intent to send mail to the developer,
 3. How to add:
-   - different functionality as drawable, buttons, textViews etc.
-   - dialog (alert dialog) when user click back button
+    - different functionality as drawables, buttons, textViews etc.,
+    - dialog (alert dialog) when the user clicks the back button,
 4. Important elements and functions, as:
-   - make working all buttons and text view,
-   - cardView,
-   - data class,
-   - constants,
-   - progress bar,
-   - object - special class,
-   - setOnClickListener()
-   - intent and passing data to next activity,
-   - passing and retrieving data via intent  
-   - part of collections,
-   - null safety,
-   - generate privacy policy,
-5. Publish application on Play Store
-6. I should test application more carefully before publish it. Also ask other developers for help 
-   to test it. Then there is a chance that someone will take a fresh look at the application 
+    - make working all buttons and text view,
+    - card view,
+    - data class,
+    - constants,
+    - progress bar,
+    - object - special class,
+    - setOnClickListener()
+    - intent and passing data to the next activity,
+    - passing and retrieving data via intent
+    - part of collections,
+    - null safety,
+    - generate privacy policy,
+5. Publish the application on the Google Play Store,
+6. I should test the application more carefully before publishing it. Also, ask other developers for
+   help
+   to test it. There is a chance that someone will take a fresh look at the application
    and it helps avoid bugs.
-   
+
 ### Links (to say "Thank you!" for others job): ###
 
 - [Denis Panjuta](https://tutorials.eu/)
@@ -98,11 +111,14 @@ Of course there is space to develop this app for different features.
 
 ### Dear Visitor ###
 
-If you see an opportunity to improve my code do not hesitate to contact me: maciej.k.glownia@gmail.com. 
-If you want to copy it and develop with your own idea, take it and enjoy learning path.
+If you see an opportunity to improve my code do not hesitate to contact me:
+maciej.k.glownia@gmail.com.
+If you want to copy it and develop it with your idea, take it and enjoy the learning path.
 
 ### Summary ###
-There are many concepts, more of them I saw first time. They need to be repeat to understand them 
-better, but I used many lines of comments to write down explanation to understand, as good as 
-possible, what happen in this code, which functions are responsible for, and also why some concepts 
-I should use in these case.
+
+There are many concepts, more of them I saw the first time. They need to be repeat to understand
+them
+better, but I used many lines of comments to write down explanations to understand, as well as
+possible, what happens in this code, which functions are responsible for, and also why some concepts
+I should use it in these cases.
