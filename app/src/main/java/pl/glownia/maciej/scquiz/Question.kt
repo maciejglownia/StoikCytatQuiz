@@ -1,4 +1,4 @@
-package pl.glownia.maciej.stoikcytatquiz
+package pl.glownia.maciej.scquiz
 
 data class Question(
     val id: Int,

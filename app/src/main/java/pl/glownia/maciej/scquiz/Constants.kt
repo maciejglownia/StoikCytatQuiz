@@ -1,4 +1,4 @@
-package pl.glownia.maciej.stoikcytatquiz
+package pl.glownia.maciej.scquiz
 
 // object is a special class that only has one instance. If you create a class with the object
 // keyword instead of class, the Kotlin compiler makes the constructor private, creates a static

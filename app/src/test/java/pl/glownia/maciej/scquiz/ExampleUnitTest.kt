@@ -1,4 +1,4 @@
-package pl.glownia.maciej.stoikcytatquiz
+package pl.glownia.maciej.scquiz
 
 import org.junit.Test
 

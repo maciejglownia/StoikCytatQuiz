@@ -1,4 +1,4 @@
-package pl.glownia.maciej.stoikcytatquiz
+package pl.glownia.maciej.scquiz
 
 import android.annotation.SuppressLint
 import android.app.Dialog

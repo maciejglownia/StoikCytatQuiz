@@ -1,4 +1,4 @@
-package pl.glownia.maciej.stoikcytatquiz
+package pl.glownia.maciej.scquiz
 
 import android.app.AlertDialog
 import android.content.ActivityNotFoundException
